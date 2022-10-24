@@ -8,13 +8,30 @@
 	<AssemblyVersion>22.9.0</AssemblyVersion>
     <FileVersion>22.9.0</FileVersion>
     <Version>$(VersionPrefix)22.9.0</Version>
-    <Authors>ema</Authors>
+    <Authors>Lemutec</Authors>
     <Company>Lemutec</Company>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
+    <Title>MediaInfoDLL</Title>
+    <Description>The MediaInfoLib .NET Wrapper for nuget package. Used like demo MediaInfoDLL.</Description>
+    <PackageProjectUrl>https://github.com/lemutec/MediaInfoNet</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/lemutec/MediaInfoNet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>mediainfo</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>MediaInfo.png</PackageIcon>
   </PropertyGroup>
   
   <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="build\package.targets" Pack="True" PackagePath="\build\$(PackageId).targets" />
     <None Include="build\package.props" Pack="True" PackagePath="\build\$(PackageId).props" />
     <None Include="buildTransitive\package.targets" Pack="True" PackagePath="\buildTransitive\$(PackageId).targets" />
@@ -23,6 +40,13 @@
       <Pack>True</Pack>
       <PackagePath>lib\netstandard2.0\MediaInfo.dll</PackagePath>
     </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="MediaInfo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
