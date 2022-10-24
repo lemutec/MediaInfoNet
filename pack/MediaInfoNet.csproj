@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <PackageVersion>22.9.0</PackageVersion>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="build\package.targets" Pack="True" PackagePath="\build\$(PackageId).targets" />
+    <None Include="build\package.props" Pack="True" PackagePath="\build\$(PackageId).props" />
+    <None Include="buildTransitive\package.targets" Pack="True" PackagePath="\buildTransitive\$(PackageId).targets" />
+    <None Include="buildTransitive\package.props" Pack="True" PackagePath="\buildTransitive\$(PackageId).props" />
+    <Content Include="..\lib\MediaInfo.dll">
+      <Pack>True</Pack>
+      <PackagePath>lib\netstandard2.0\MediaInfo.dll</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>
