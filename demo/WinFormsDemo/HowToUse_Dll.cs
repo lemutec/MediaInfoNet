@@ -15,19 +15,20 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 using MediaInfoLib;
+using System.ComponentModel;
 
 namespace MediaInfoLib_MSCS;
 
 /// <summary>
 /// Summary description for Form1.
 /// </summary>
-public class Form1 : System.Windows.Forms.Form
+public class Form1 : Form
 {
-    private System.Windows.Forms.RichTextBox richTextBox1 = null!;
+    private RichTextBox richTextBox1 = null!;
     /// <summary>
     /// Required designer variable.
     /// </summary>
-    private System.ComponentModel.Container components = null!;
+    private Container components = null!;
 
     public Form1()
     {
@@ -63,26 +64,26 @@ public class Form1 : System.Windows.Forms.Form
     /// </summary>
     private void InitializeComponent()
     {
-        this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+        this.richTextBox1 = new RichTextBox();
         this.SuspendLayout();
         //
         // richTextBox1
         //
-        this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+        this.richTextBox1.Location = new Point(0, 0);
         this.richTextBox1.Name = "richTextBox1";
-        this.richTextBox1.Size = new System.Drawing.Size(768, 512);
+        this.richTextBox1.Size = new Size(768, 512);
         this.richTextBox1.TabIndex = 0;
         this.richTextBox1.Text = "";
         //
         // Form1
         //
-        this.ClientSize = new System.Drawing.Size(770, 514);
+        this.ClientSize = new Size(770, 514);
         this.Controls.Add(this.richTextBox1);
-        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+        this.FormBorderStyle = FormBorderStyle.Fixed3D;
         this.Name = "Form1";
-        this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+        this.StartPosition = FormStartPosition.CenterScreen;
         this.Text = "How to use MediaInfo.Dll";
-        this.Load += new System.EventHandler(this.Form1_Load);
+        this.Load += Form1_Load;
         this.ResumeLayout(false);
 
     }
@@ -93,7 +94,7 @@ public class Form1 : System.Windows.Forms.Form
     /// </summary>
 
 
-    private void Form1_Load(object sender, System.EventArgs e)
+    private void Form1_Load(object? sender, EventArgs e)
     {
         //Test if version of DLL is compatible : 3rd argument is "version of DLL tested;Your application name;Your application version"
         string ToDisplay;
