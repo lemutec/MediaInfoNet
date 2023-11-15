@@ -182,8 +182,8 @@ public class Form1 : Form
 
             //Sending the buffer to MediaInfo
             System.Runtime.InteropServices.GCHandle GC = System.Runtime.InteropServices.GCHandle.Alloc(From_Buffer, System.Runtime.InteropServices.GCHandleType.Pinned);
-            IntPtr From_Buffer_IntPtr = GC.AddrOfPinnedObject();
-            Status Result = (Status)MI.Open_Buffer_Continue(From_Buffer_IntPtr, (IntPtr)From_Buffer_Size);
+            nint From_Buffer_nint = GC.AddrOfPinnedObject();
+            Status Result = (Status)MI.Open_Buffer_Continue(From_Buffer_nint, From_Buffer_Size);
             GC.Free();
             if ((Result & Status.Finalized) == Status.Finalized)
                 break;
