@@ -4,10 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>10.0</LangVersion>
 	<AssemblyName>MediaInfoDLL</AssemblyName>
-    <PackageVersion>22.12.0</PackageVersion>
-	<AssemblyVersion>22.12.0</AssemblyVersion>
-    <FileVersion>22.12.0</FileVersion>
-    <Version>$(VersionPrefix)22.12.0</Version>
+    <PackageVersion>23.10.0</PackageVersion>
+	<AssemblyVersion>23.10.0</AssemblyVersion>
+    <FileVersion>23.10.0</FileVersion>
+    <Version>$(VersionPrefix)23.10.0</Version>
     <Authors>Lemutec</Authors>
     <Company>Lemutec</Company>
     <Nullable>enable</Nullable>
