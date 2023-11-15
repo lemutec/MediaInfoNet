@@ -25,6 +25,7 @@ namespace MediaInfoLib_MSCS;
 public class Form1 : Form
 {
     private RichTextBox richTextBox1 = null!;
+
     /// <summary>
     /// Required designer variable.
     /// </summary>
@@ -45,19 +46,20 @@ public class Form1 : Form
     /// <summary>
     /// Clean up any resources being used.
     /// </summary>
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-        if( disposing )
+        if (disposing)
         {
             if (components != null)
             {
                 components.Dispose();
             }
         }
-        base.Dispose( disposing );
+        base.Dispose(disposing);
     }
 
     #region Windows Form Designer generated code
+
     /// <summary>
     /// Methode requise pour la prise en charge du concepteur - ne modifiez pas
     /// le contenu de cette méthode avec l'éditeur de code.
@@ -85,14 +87,13 @@ public class Form1 : Form
         this.Text = "How to use MediaInfo.Dll";
         this.Load += Form1_Load;
         this.ResumeLayout(false);
-
     }
-    #endregion
+
+    #endregion Windows Form Designer generated code
 
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
-
 
     private void Form1_Load(object? sender, EventArgs e)
     {
@@ -158,7 +159,7 @@ public class Form1 : Form
         richTextBox1.Text = ToDisplay;
     }
 
-    string ExampleWithStream()
+    private string ExampleWithStream()
     {
         //Initilaizing MediaInfo
         MediaInfo MI = new MediaInfo();
@@ -167,8 +168,8 @@ public class Form1 : Form
         FileStream From = new FileStream("Example.ogg", FileMode.Open, FileAccess.Read);
 
         //From: preparing a memory buffer for reading
-        byte[] From_Buffer = new byte[64*1024];
-        int    From_Buffer_Size; //The size of the read file buffer
+        byte[] From_Buffer = new byte[64 * 1024];
+        int From_Buffer_Size; //The size of the read file buffer
 
         //Preparing to fill MediaInfo with a buffer
         MI.Open_Buffer_Init(From.Length, 0);
