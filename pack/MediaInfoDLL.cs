@@ -264,11 +264,11 @@ public class MediaInfo
 
     public int Count_Get(StreamKind StreamKind, int StreamNumber)
     {
-        if (Handle == 0) return 0; return (int)MediaInfo_Count_Get(Handle, (nint)StreamKind, (nint)StreamNumber);
+        if (Handle == 0) return 0; return (int)MediaInfo_Count_Get(Handle, (nint)StreamKind, StreamNumber);
     }
 
-    private nint Handle;
-    private bool MustUseAnsi;
+    private readonly nint Handle;
+    private readonly bool MustUseAnsi;
 
     //Default values, if you know how to set default values in C#, say me
     public string Get(StreamKind StreamKind, int StreamNumber, string Parameter, InfoKind KindOfInfo)
