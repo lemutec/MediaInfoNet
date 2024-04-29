@@ -6,6 +6,10 @@ Here are MediaInfo .NET APIs wrapped from [MediaArea.net](https://mediaarea.net/
 >
 > If you want to use in Windows 32-bit, you can replace the `MediaInfo.dll` to 32bit type by yourself.
 
+## Nuget
+
+https://www.nuget.org/packages/MediaInfoDLL
+
 ## Usage
 
 ```c#
