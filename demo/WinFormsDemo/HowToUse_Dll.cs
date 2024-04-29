@@ -99,7 +99,7 @@ public class Form1 : Form
     {
         //Test if version of DLL is compatible : 3rd argument is "version of DLL tested;Your application name;Your application version"
         string ToDisplay;
-        MediaInfo MI = new MediaInfo();
+        using MediaInfo MI = new();
 
         ToDisplay = MI.Option("Info_Version", "0.7.0.0;MediaInfoDLL_Example_CS;0.7.0.0");
         if (ToDisplay.Length == 0)

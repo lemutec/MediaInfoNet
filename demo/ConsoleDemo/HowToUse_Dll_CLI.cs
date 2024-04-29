@@ -24,7 +24,7 @@ public class CLI
     public static void Main(string[] Args)
     {
         string ToDisplay;
-        MediaInfo MI = new();
+        using MediaInfo MI = new();
 
         ToDisplay = MI.Option("Info_Version", "0.7.0.0;MediaInfoDLL_Example_CS;0.7.0.0");
         if (ToDisplay.Length == 0)

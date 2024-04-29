@@ -69,7 +69,7 @@ public enum Status
     Finalized = 0x08,
 }
 
-public class MediaInfo
+public class MediaInfo : IDisposable
 {
     //Import of DLL functions. DO NOT USE until you know what you do (MediaInfo DLL do NOT use CoTaskMemAlloc to allocate memory)
     [DllImport("MediaInfo.dll")]
@@ -160,9 +160,30 @@ public class MediaInfo
 
     ~MediaInfo()
     {
-        if (Handle == 0)
-            return;
-        MediaInfo_Delete(Handle);
+        Dispose(false);
+    }
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposed)
+        {
+            if (disposing)
+            {
+                if (Handle == 0)
+                    return;
+                MediaInfo_Delete(Handle);
+            }
+
+            Close();
+
+            disposed = true;
+        }
     }
 
     public int Open(string FileName)
@@ -295,9 +316,11 @@ public class MediaInfo
     {
         return Count_Get(StreamKind, -1);
     }
+
+    private bool disposed = false;
 }
 
-public class MediaInfoList
+public class MediaInfoList : IDisposable
 {
     //Import of DLL functions. DO NOT USE until you know what you do (MediaInfo DLL do NOT use CoTaskMemAlloc to allocate memory)
     [DllImport("MediaInfo.dll")]
@@ -338,7 +361,28 @@ public class MediaInfoList
 
     ~MediaInfoList()
     {
-        MediaInfoList_Delete(Handle);
+        Dispose(false);
+    }
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposed)
+        {
+            if (disposing)
+            {
+                MediaInfoList_Delete(Handle);
+            }
+
+            Close();
+
+            disposed = true;
+        }
     }
 
     public int Open(string FileName, InfoFileOptions Options)
@@ -418,4 +462,6 @@ public class MediaInfoList
     {
         return Count_Get(FilePos, StreamKind, -1);
     }
+
+    private bool disposed = false;
 }
