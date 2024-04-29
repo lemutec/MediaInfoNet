@@ -320,6 +320,27 @@ public class MediaInfo : IDisposable
     private bool disposed = false;
 }
 
+public static class MediaInfoExtension
+{
+    public static MediaInfo WithOpen(this MediaInfo self, string FileName)
+    {
+        _ = self.Open(FileName);
+        return self;
+    }
+
+    public static MediaInfo WithOption(this MediaInfo self, string Option, string Value, out string Result)
+    {
+        Result = self.Option(Option, Value);
+        return self;
+    }
+
+    public static MediaInfo WithOption(this MediaInfo self, string Option_, out string Result)
+    {
+        Result = self.Option(Option_);
+        return self;
+    }
+}
+
 public class MediaInfoList : IDisposable
 {
     //Import of DLL functions. DO NOT USE until you know what you do (MediaInfo DLL do NOT use CoTaskMemAlloc to allocate memory)
@@ -464,4 +485,25 @@ public class MediaInfoList : IDisposable
     }
 
     private bool disposed = false;
+}
+
+public static class MediaInfoListExtension
+{
+    public static MediaInfoList WithOpen(this MediaInfoList self, string FileName)
+    {
+        self.Open(FileName);
+        return self;
+    }
+
+    public static MediaInfoList WithOption(this MediaInfoList self, string Option, string Value, out string Result)
+    {
+        Result = self.Option(Option, Value);
+        return self;
+    }
+
+    public static MediaInfoList WithOption(this MediaInfoList self, string Option_, out string Result)
+    {
+        Result = self.Option(Option_);
+        return self;
+    }
 }
