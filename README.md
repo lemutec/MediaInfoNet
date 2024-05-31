@@ -1,27 +1,52 @@
 # MediaInfo
 
-Here are MediaInfo .NET APIs wrapped from [MediaArea.net](https://mediaarea.net/en/MediaInfo/Download/Windows).
+MediaInfo .NET APIs wrapped from [MediaArea.net](https://mediaarea.net/en/MediaInfo/Download/Windows).
 
-> This package only supports Windows 64-bit.
->
-> If you want to use in Windows 32-bit, you can replace the `MediaInfo.dll` to 32bit type by yourself.
-
-## Nuget
-
-https://www.nuget.org/packages/MediaInfoDLL
+Nuget：https://www.nuget.org/packages/MediaInfoDLL
 
 ## Usage
 
+1. Provide Media Inform
+
 ```c#
-using MediaInfo mi = new();
-mi.Open(@"C:\media.mp4");
-string inform = mi.Inform();
-mi.Close();
-Console.WriteLine(inform);
+using MediaInfoLib;
+
+using MediaInfo lib = new();
+lib.Open(@"C:\media.mp4");
+Console.WriteLine(lib.Inform());
 ```
 
-## Demo
+2. Check audio track exists
+
+```C#
+using MediaInfoLib;
+
+using MediaInfo lib = new();
+bool hasAudio = lib.WithOpen(fileName).Count_Get(StreamKind.Audio) > 0;
+Console.WriteLine(hasAudio);
+```
+
+3. Get audio track parameter
+
+```C#
+using MediaInfoLib;
+
+using MediaInfo lib = new();
+lib.Open(fileName);
+_ = double.TryParse(lib.Get(StreamKind.Audio, 0, "BitRate"), out double bitRate);
+Console.WriteLine(bitRate);
+```
+
+## Samples
 
 [ConsoleDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/ConsoleDemo)
 
 [WinFormsDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/WinFormsDemo)
+
+## License
+
+MediaInfoLib - https://github.com/MediaArea/MediaInfoLib
+Copyright (c) MediaArea.net SARL. All Rights Reserved.
+
+This program is freeware under BSD-2-Clause license conditions.
+See License.html for more information

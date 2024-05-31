@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+    <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>12.0</LangVersion>
-	<AssemblyName>MediaInfoDLL</AssemblyName>
-    <PackageVersion>24.4.0</PackageVersion>
-	<AssemblyVersion>24.4.0</AssemblyVersion>
-    <FileVersion>24.4.0</FileVersion>
-    <Version>$(VersionPrefix)24.4.0</Version>
+    <AssemblyName>MediaInfoDLL</AssemblyName>
+    <PackageVersion>24.4.1-rc1</PackageVersion>
+    <AssemblyVersion>24.4.1</AssemblyVersion>
+    <FileVersion>24.4.1</FileVersion>
+    <Version>$(VersionPrefix)24.4.1</Version>
     <Authors>Lemutec</Authors>
     <Company>Lemutec</Company>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
     <Title>MediaInfoDLL</Title>
-    <Description>The MediaInfoLib .NET Wrapper.</Description>
+    <Description>The MediaInfoLib .NET Wrapper for Windows.</Description>
     <PackageProjectUrl>https://github.com/lemutec/MediaInfoNet</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/lemutec/MediaInfoNet</RepositoryUrl>
@@ -21,32 +21,36 @@
     <PackageTags>mediainfo</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>MediaInfo.png</PackageIcon>
-  </PropertyGroup>
+    </PropertyGroup>
   
-  <ItemGroup>
+    <ItemGroup>
     <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
     </None>
     <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
     </None>
     <None Include="build\package.targets" Pack="True" PackagePath="\build\$(PackageId).targets" />
     <None Include="build\package.props" Pack="True" PackagePath="\build\$(PackageId).props" />
     <None Include="buildTransitive\package.targets" Pack="True" PackagePath="\buildTransitive\$(PackageId).targets" />
     <None Include="buildTransitive\package.props" Pack="True" PackagePath="\buildTransitive\$(PackageId).props" />
-    <Content Include="..\lib\MediaInfo.dll">
-      <Pack>True</Pack>
-      <PackagePath>lib\netstandard2.0\MediaInfo.dll</PackagePath>
+    <Content Include="..\lib\x64\MediaInfo.dll">
+        <Pack>True</Pack>
+        <PackagePath>lib\netstandard2.0\x64\MediaInfo.dll</PackagePath>
     </Content>
-  </ItemGroup>
+    <Content Include="..\lib\x86\MediaInfo.dll">
+        <Pack>True</Pack>
+        <PackagePath>lib\netstandard2.0\x86\MediaInfo.dll</PackagePath>
+    </Content>
+    </ItemGroup>
   
-  <ItemGroup>
+    <ItemGroup>
     <None Update="MediaInfo.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
     </None>
-  </ItemGroup>
+    </ItemGroup>
 
 </Project>

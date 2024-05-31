@@ -1,5 +1,15 @@
-<Project>
-  <Target Name="CopyImage1File" BeforeTargets="AfterCompile">
-	<Copy SourceFiles="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\MediaInfo.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="True" />
-  </Target>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<MediaInfoDllName>MediaInfo.dll</MediaInfoDllName>
+	</PropertyGroup>
+
+	<Target Name="CopyMediaInfoDll" BeforeTargets="AfterCompile">
+		<ItemGroup>
+			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\x64\MediaInfo.dll" Condition="'$(PlatformTarget)' == 'x64'" />
+			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\x86\MediaInfo.dll" Condition="'$(PlatformTarget)' != 'x64' and '$(PlatformTarget)' != 'x86'" />
+			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\x86\MediaInfo.dll" Condition="'$(PlatformTarget)' == 'x86'" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(MediaInfoDll)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="True" />
+	</Target>
 </Project>

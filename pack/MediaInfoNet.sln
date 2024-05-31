@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaInfoNet", "MediaInfoNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDemo", "..\demo\ConsoleDemo\ConsoleDemo.csproj", "{D1139CCA-085B-44A0-B1F6-F98F3C9575AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsDemo", "..\demo\WinFormsDemo\WinFormsDemo.csproj", "{6B96FBD2-6D97-4591-93F6-836917AD0DF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsDemo", "..\demo\WinFormsDemo\WinFormsDemo.csproj", "{6B96FBD2-6D97-4591-93F6-836917AD0DF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{19875FF5-5DD5-4D01-89B3-9C9AB084B6DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1139CCA-085B-44A0-B1F6-F98F3C9575AA} = {19875FF5-5DD5-4D01-89B3-9C9AB084B6DE}
+		{6B96FBD2-6D97-4591-93F6-836917AD0DF8} = {19875FF5-5DD5-4D01-89B3-9C9AB084B6DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {776AF35A-8FF7-4AFB-9B30-04BC0B58E1D2}
