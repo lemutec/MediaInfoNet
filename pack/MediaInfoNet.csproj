@@ -4,16 +4,16 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>12.0</LangVersion>
     <AssemblyName>MediaInfoDLL</AssemblyName>
-    <PackageVersion>24.4.1-rc1</PackageVersion>
-    <AssemblyVersion>24.4.1</AssemblyVersion>
-    <FileVersion>24.4.1</FileVersion>
-    <Version>$(VersionPrefix)24.4.1</Version>
+    <PackageVersion>24.5.0</PackageVersion>
+    <AssemblyVersion>24.5.0</AssemblyVersion>
+    <FileVersion>24.5.0</FileVersion>
+    <Version>$(VersionPrefix)24.5.0</Version>
     <Authors>Lemutec</Authors>
     <Company>Lemutec</Company>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
     <Title>MediaInfoDLL</Title>
-    <Description>The MediaInfoLib .NET Wrapper for Windows.</Description>
+    <Description>The MediaInfoLib .NET Wrapper.</Description>
     <PackageProjectUrl>https://github.com/lemutec/MediaInfoNet</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/lemutec/MediaInfoNet</RepositoryUrl>

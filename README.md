@@ -1,6 +1,6 @@
 # MediaInfo
 
-MediaInfo .NET APIs wrapped from [MediaArea.net](https://mediaarea.net/en/MediaInfo/Download/Windows).
+Minimal MediaInfo .NET APIs wrapped from [MediaArea.net](https://mediaarea.net/en/MediaInfo/Download/Windows).
 
 Nuget：https://www.nuget.org/packages/MediaInfoDLL
 
@@ -46,7 +46,9 @@ Console.WriteLine(bitRate);
 ## License
 
 MediaInfoLib - https://github.com/MediaArea/MediaInfoLib
+
 Copyright (c) MediaArea.net SARL. All Rights Reserved.
 
 This program is freeware under BSD-2-Clause license conditions.
+
 See License.html for more information

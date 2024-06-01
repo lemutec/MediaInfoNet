@@ -69,79 +69,89 @@ public enum Status
     Finalized = 0x08,
 }
 
+public sealed class Libs
+{
+    public const string Windows = "MediaInfo.dll";
+    public const string MacOS = "libmediainfo.dylib";
+}
+
 public class MediaInfo : IDisposable
 {
-    //Import of DLL functions. DO NOT USE until you know what you do (MediaInfo DLL do NOT use CoTaskMemAlloc to allocate memory)
-    [DllImport("MediaInfo.dll")]
+    /// <summary>
+    /// Import of DLL functions. DO NOT USE until you know what you do (MediaInfo DLL do NOT use CoTaskMemAlloc to allocate memory)
+    /// </summary>
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_New();
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern void MediaInfo_Delete(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Open(nint Handle, [MarshalAs(UnmanagedType.LPWStr)] string FileName);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_Open(nint Handle, nint FileName);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Open_Buffer_Init(nint Handle, long File_Size, long File_Offset);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_Open(nint Handle, long File_Size, long File_Offset);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Open_Buffer_Continue(nint Handle, nint Buffer, nint Buffer_Size);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_Open_Buffer_Continue(nint Handle, long File_Size, byte[] Buffer, nint Buffer_Size);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern long MediaInfo_Open_Buffer_Continue_GoTo_Get(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern long MediaInfoA_Open_Buffer_Continue_GoTo_Get(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Open_Buffer_Finalize(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_Open_Buffer_Finalize(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern void MediaInfo_Close(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Inform(nint Handle, nint Reserved);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_Inform(nint Handle, nint Reserved);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_GetI(nint Handle, nint StreamKind, nint StreamNumber, nint Parameter, nint KindOfInfo);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_GetI(nint Handle, nint StreamKind, nint StreamNumber, nint Parameter, nint KindOfInfo);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Get(nint Handle, nint StreamKind, nint StreamNumber, [MarshalAs(UnmanagedType.LPWStr)] string Parameter, nint KindOfInfo, nint KindOfSearch);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_Get(nint Handle, nint StreamKind, nint StreamNumber, nint Parameter, nint KindOfInfo, nint KindOfSearch);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Option(nint Handle, [MarshalAs(UnmanagedType.LPWStr)] string Option, [MarshalAs(UnmanagedType.LPWStr)] string Value);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoA_Option(nint Handle, nint Option, nint Value);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_State_Get(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfo_Count_Get(nint Handle, nint StreamKind, nint StreamNumber);
 
-    //MediaInfo class
+    /// <summary>
+    /// MediaInfo class
+    /// </summary>
     public MediaInfo()
     {
         try
@@ -291,7 +301,9 @@ public class MediaInfo : IDisposable
     private readonly nint Handle;
     private readonly bool MustUseAnsi;
 
-    //Default values, if you know how to set default values in C#, say me
+    /// <summary>
+    /// Default values, if you know how to set default values in C#, say me
+    /// </summary>
     public string Get(StreamKind StreamKind, int StreamNumber, string Parameter, InfoKind KindOfInfo)
     {
         return Get(StreamKind, StreamNumber, Parameter, KindOfInfo, InfoKind.Name);
@@ -344,34 +356,34 @@ public static class MediaInfoExtension
 public class MediaInfoList : IDisposable
 {
     //Import of DLL functions. DO NOT USE until you know what you do (MediaInfo DLL do NOT use CoTaskMemAlloc to allocate memory)
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_New();
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern void MediaInfoList_Delete(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_Open(nint Handle, [MarshalAs(UnmanagedType.LPWStr)] string FileName, nint Options);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern void MediaInfoList_Close(nint Handle, nint FilePos);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_Inform(nint Handle, nint FilePos, nint Reserved);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_GetI(nint Handle, nint FilePos, nint StreamKind, nint StreamNumber, nint Parameter, nint KindOfInfo);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_Get(nint Handle, nint FilePos, nint StreamKind, nint StreamNumber, [MarshalAs(UnmanagedType.LPWStr)] string Parameter, nint KindOfInfo, nint KindOfSearch);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_Option(nint Handle, [MarshalAs(UnmanagedType.LPWStr)] string Option, [MarshalAs(UnmanagedType.LPWStr)] string Value);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_State_Get(nint Handle);
 
-    [DllImport("MediaInfo.dll")]
+    [DllImport(Libs.Windows)]
     private static extern nint MediaInfoList_Count_Get(nint Handle, nint FilePos, nint StreamKind, nint StreamNumber);
 
     //MediaInfo class
@@ -448,7 +460,9 @@ public class MediaInfoList : IDisposable
 
     private readonly nint Handle;
 
-    //Default values, if you know how to set default values in C#, say me
+    /// <summary>
+    /// Default values, if you know how to set default values in C#, say me
+    /// </summary>
     public void Open(string FileName)
     {
         Open(FileName, 0);
