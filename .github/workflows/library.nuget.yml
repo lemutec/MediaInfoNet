@@ -23,7 +23,7 @@ jobs:
         uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.5
 
       - name: Install dependencies
-        run: dotnet restore NotifyIcon
+        run: cd pack && dotnet restore MediaInfoNet.csproj
 
       - name: Build
         run: cd pack && dotnet build MediaInfoNet.csproj --configuration Release --no-restore
