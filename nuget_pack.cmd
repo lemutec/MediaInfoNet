@@ -2,5 +2,5 @@
 @REM dotnet nuget locals all --clear
 cd pack
 dotnet restore
-dotnet pack -c Release -o ../
+dotnet pack MediaInfoNet.csproj -c Release -o ../
 @pause
