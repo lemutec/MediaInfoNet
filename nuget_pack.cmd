@@ -1,4 +1,4 @@
-@REM rd /s /q C:\Users\{UserName}\.nuget\packages\vccli.net
+@REM rd /s /q C:\Users\{UserName}\.nuget\packages\MediaInfoDLL
 @REM dotnet nuget locals all --clear
 cd pack
 dotnet restore
