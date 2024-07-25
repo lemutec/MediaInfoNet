@@ -29,11 +29,11 @@ jobs:
         run: cd pack && dotnet build MediaInfoNet.csproj --configuration Release --no-restore
 
       - name: Pack
-        run: cd pack && dotnet pack MediaInfoNet.csproj -c Release --no-build -o out
+        run: cd pack && dotnet pack MediaInfoNet.csproj -c Release --no-build -o ../
 
       - name: Push NuGet package
         # run:  dotnet nuget push "out\*.nupkg" -k ${{secrets.NUGET_AUTH_TOKEN}} --source https://api.nuget.org/v3/index.json
         uses: actions/upload-artifact@v3
         with:
           name: nuget-packages
-          path: out/*.nupkg
+          path: ./*.nupkg
