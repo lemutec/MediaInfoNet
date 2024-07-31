@@ -12,7 +12,7 @@ Please provide the following information to quickly locate the problem
 - System Environment：
 
 
-- Fischless Version：
+- Version：
 
 
 - Description of the issue：
