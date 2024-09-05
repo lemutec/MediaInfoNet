@@ -1,12 +1,10 @@
 [![NuGet](https://img.shields.io/nuget/v/MediaInfoDLL.svg)](https://nuget.org/packages/MediaInfoDLL) [![Actions](https://github.com/lemutec/MediaInfoNet/actions/workflows/library.nuget.yml/badge.svg)](https://github.com/lemutec/MediaInfoNet/actions/workflows/library.nuget.yml) [![Platform](https://img.shields.io/badge/platform-Windows-blue?logo=windowsxp&color=1E9BFA)](https://dotnet.microsoft.com/en-us/download/dotnet/latest/runtime)
 
-# MediaInfo
+# MediaInfoNet
 
 Minimal MediaInfo .NET APIs wrapped from [MediaArea.net](https://mediaarea.net/en/MediaInfo/Download/Windows).
 
 Support for Windows Vista, 7, 8, 10, 11 with x86, x64.
-
-Nuget：https://www.nuget.org/packages/MediaInfoDLL
 
 ## Usage
 
@@ -54,11 +52,24 @@ _ = double.TryParse(lib.Get(StreamKind.Audio, 0, "BitRate"), out double bitRate)
 Console.WriteLine(bitRate);
 ```
 
-## Samples
+## Examples
 
-[ConsoleDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/ConsoleDemo)
+1. [ConsoleDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/ConsoleDemo) for Console Application.
 
-[WinFormsDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/WinFormsDemo)
+2. [WinFormsDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/WinFormsDemo) for [WinForms](https://github.com/dotnet/winforms) Application.
+
+3. [VSEnc](https://github.com/lemutec/VSEnc) for [WPF](https://github.com/dotnet/wpf) Application.
+4. [LyricStudio](https://github.com/lemutec/LyricStudio) for [Avalonia](https://github.com/AvaloniaUI/Avalonia) Application.
+
+## References
+
+https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/MediaInfo_Config.h
+
+https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/File__Analyse_Automatic.h
+
+https://github.com/MediaArea/MediaInfo/tree/master/Source/Resource/Plugin/Language
+
+https://github.com/MediaArea/MediaInfo/blob/master/Source/Resource/Language.csv
 
 ## License
 
