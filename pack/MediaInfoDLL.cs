@@ -684,6 +684,12 @@ public static class MediaInfoExtension
         return self;
     }
 
+    public static MediaInfo WithClose(this MediaInfo self)
+    {
+        self.Close();
+        return self;
+    }
+
     public static MediaInfo WithOption(this MediaInfo self, string Option, string Value, out string Result)
     {
         Result = self.Option(Option, Value);
@@ -850,6 +856,12 @@ public static class MediaInfoListExtension
     public static MediaInfoList WithOpen(this MediaInfoList self, string FileName)
     {
         self.Open(FileName);
+        return self;
+    }
+
+    public static MediaInfoList WithClose(this MediaInfoList self)
+    {
+        self.Close();
         return self;
     }
 
