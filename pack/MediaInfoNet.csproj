@@ -23,34 +23,52 @@
         <PackageIcon>MediaInfo.png</PackageIcon>
     </PropertyGroup>
 
-    <ItemGroup>
-    <None Include="..\LICENSE">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\README.md">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-    </None>
-    <None Include="build\package.targets" Pack="True" PackagePath="\build\$(PackageId).targets" />
-    <None Include="build\package.props" Pack="True" PackagePath="\build\$(PackageId).props" />
-    <None Include="buildTransitive\package.targets" Pack="True" PackagePath="\buildTransitive\$(PackageId).targets" />
-    <None Include="buildTransitive\package.props" Pack="True" PackagePath="\buildTransitive\$(PackageId).props" />
-    <Content Include="..\lib\x64\MediaInfo.dll">
-        <Pack>True</Pack>
-        <PackagePath>lib\netstandard2.0\x64\MediaInfo.dll</PackagePath>
-    </Content>
-    <Content Include="..\lib\x86\MediaInfo.dll">
-        <Pack>True</Pack>
-        <PackagePath>lib\netstandard2.0\x86\MediaInfo.dll</PackagePath>
-    </Content>
+	<ItemGroup>
+        <None Include="..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+		
+        <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+		
+        <None Include="build\package.targets" Pack="True" PackagePath="\build\$(PackageId).targets" />
+        <None Include="build\package.props" Pack="True" PackagePath="\build\$(PackageId).props" />
+        <None Include="buildTransitive\package.targets" Pack="True" PackagePath="\buildTransitive\$(PackageId).targets" />
+        <None Include="buildTransitive\package.props" Pack="True" PackagePath="\buildTransitive\$(PackageId).props" />
+		
+        <Content Include="..\lib\x64\MediaInfo.dll">
+            <Pack>True</Pack>
+            <PackagePath>lib\netstandard2.0\x64\MediaInfo.dll</PackagePath>
+        </Content>
+		
+        <Content Include="..\lib\x86\MediaInfo.dll">
+            <Pack>True</Pack>
+            <PackagePath>lib\netstandard2.0\x86\MediaInfo.dll</PackagePath>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-    <None Update="MediaInfo.png">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-    </None>
+        <None Update="MediaInfo.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
     </ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Resource\Plugin\Custom\*.csv" />
+		<Resource Include="Resource\Plugin\Language\*.csv" />
+		<Resource Include="Resource\Plugin\Sheet\*.csv" />
+		<Resource Include="Resource\Plugin\Tree\*.csv" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Resource\Plugin\Custom\*.csv" />
+		<EmbeddedResource Include="Resource\Plugin\Language\*.csv" />
+		<EmbeddedResource Include="Resource\Plugin\Sheet\*.csv" />
+		<EmbeddedResource Include="Resource\Plugin\Tree\*.csv" />
+	</ItemGroup>
 
 </Project>

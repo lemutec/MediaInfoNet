@@ -16,7 +16,12 @@
 
 using System;
 using System.ComponentModel;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using static MediaInfoLib.Options;
 
 namespace MediaInfoLib;
 
@@ -90,84 +95,323 @@ public static class Libs
 /// <summary>
 /// Contains constants for the options available in MediaInfo.
 /// Each constant represents a parameter that can be used with MediaInfo_Option.
+/// https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/MediaInfo_Config.h
 /// </summary>
 public static class Options
 {
     /// <summary>
-    /// Gets the version of MediaInfo.
+    /// Sets whether to display complete information (default is "1" for enabled).
     /// </summary>
-    public const string Info_Version = nameof(Info_Version);
+    [Description("void Complete_Set (size_t NewValue);")]
+    public const string Complete = "Complete";
+
+    [Description("size_t Complete_Get ()")]
+    public const string Complete_Get = "Complete_Get";
+
+    [Description("void BlockMethod_Set (size_t NewValue);")]
+    public const string BlockMethod = "BlockMethod";
+
+    [Description("size_t BlockMethod_Get ();")]
+    public const string BlockMethod_Get = "BlockMethod_Get";
+
+    [Description("void Internet_Set (size_t NewValue);")]
+    public const string Internet = "Internet";
+
+    [Description("size_t Internet_Get ();")]
+    public const string Internet_Get = "Internet_Get";
+
+    [Description("void MultipleValues_Set (size_t NewValue);")]
+    public const string MultipleValues = "MultipleValues";
+
+    [Description("size_t MultipleValues_Get ();")]
+    public const string MultipleValues_Get = "MultipleValues_Get";
+
+    [Description("void ReadByHuman_Set (bool NewValue);")]
+    public const string ReadByHuman = "ReadByHuman";
+
+    [Description("bool ReadByHuman_Get ();")]
+    public const string ReadByHuman_Get = "ReadByHuman_Get";
+
+    [Description("void Legacy_Set (bool NewValue);")]
+    public const string Legacy = "Legacy";
+
+    [Description("bool Legacy_Get ();")]
+    public const string Legacy_Get = "Legacy_Get";
+
+    [Description("void LegacyStreamDisplay_Set(bool Value);")]
+    public const string LegacyStreamDisplay = "LegacyStreamDisplay";
+
+    [Description("bool LegacyStreamDisplay_Get();")]
+    public const string LegacyStreamDisplay_Get = "LegacyStreamDisplay_Get";
+
+    [Description("void SkipBinaryData_Set(bool Value);")]
+    public const string SkipBinaryData = "SkipBinaryData";
+
+    [Description("bool SkipBinaryData_Get();")]
+    public const string SkipBinaryData_Get = "SkipBinaryData_Get";
+
+    [Description("void ParseSpeed_Set(float32 NewValue);")]
+    public const string ParseSpeed = "ParseSpeed";
+
+    [Description("float32 ParseSpeed_Get();")]
+    public const string ParseSpeed_Get = "ParseSpeed_Get";
+
+    [Description("void Verbosity_Set(float32 NewValue);")]
+    public const string SkipBinarVerbosityyData_Get = "Verbosity";
+
+    [Description("float32 Verbosity_Get();")]
+    public const string Verbosity_Get = "Verbosity_Get";
+
+    [Description("void Compat_Set(int64u NewValue);")]
+    public const string Compat = "Compat";
+
+    [Description("int64u Compat_Get();")]
+    public const string Compat_Get = "Compat_Get";
+
+    [Description("void Https_Set(bool NewValue);")]
+    public const string Https = "Https";
+
+    [Description("bool Https_Get();")]
+    public const string Https_Get = "Https_Get";
 
     /// <summary>
-    /// Gets the list of all supported parameters.
+    /// <see cref="Trace_Format"/>
     /// </summary>
-    public const string Info_Parameters = nameof(Info_Parameters);
+    [Description("void Trace_Format_Set(trace_Format NewValue);")]
+    public const string TraceFormat = "Trace_Format";
 
-    /// <summary>
-    /// Gets the capacities information, such as supported formats.
-    /// </summary>
-    public const string Info_Capacities = nameof(Info_Capacities);
+    [Description("trace_Format Trace_Format_Get();")]
+    public const string TraceFormat_Get = "Trace_Format_Get";
 
-    /// <summary>
-    /// Gets the list of supported codecs.
-    /// </summary>
-    public const string Info_Codecs = nameof(Info_Codecs);
+    [Description("void Demux_Set(int8u NewValue);")]
+    public const string Demux = "Demux";
+
+    [Description("int8u Demux_Get();")]
+    public const string Demux_Get = "Demux_Get";
+
+    [Description("void LineSeparator_Set(const Ztring &NewValue);")]
+    public const string LineSeparator = "LineSeparator";
+
+    [Description("Ztring LineSeparator_Get();")]
+    public const string LineSeparator_Get = "LineSeparator_Get";
+
+    [Description("void Version_Set(const Ztring &NewValue);")]
+    public const string Version = "Version";
+
+    [Description("Ztring Version_Get();")]
+    public const string Version_Get = "Version_Get";
+
+    [Description("void ColumnSeparator_Set(const Ztring &NewValue);")]
+    public const string ColumnSeparator = "ColumnSeparator";
+
+    [Description("Ztring ColumnSeparator_Get();")]
+    public const string ColumnSeparator_Get = "ColumnSeparator_Get";
+
+    [Description("void TagSeparator_Set(const Ztring &NewValue);")]
+    public const string TagSeparator = "TagSeparator";
+
+    [Description("Ztring TagSeparator_Get();")]
+    public const string TagSeparator_Get = "TagSeparator_Get";
+
+    [Description("void Quote_Set(const Ztring &NewValue);")]
+    public const string Quote = "Quote";
+
+    [Description("Ztring Quote_Get();")]
+    public const string Quote_Get = "Quote_Get";
+
+    [Description("void DecimalPoint_Set(const Ztring &NewValue);")]
+    public const string DecimalPoint = "DecimalPoint";
+
+    [Description("Ztring DecimalPoint_Get();")]
+    public const string DecimalPoint_Get = "DecimalPoint_Get";
+
+    [Description("void ThousandsPoint_Set(const Ztring &NewValue);")]
+    public const string ThousandsPoint = "ThousandsPoint";
+
+    [Description("Ztring ThousandsPoint_Get();")]
+    public const string ThousandsPoint_Get = "ThousandsPoint_Get";
+
+    [Description("void CarriageReturnReplace_Set(const Ztring &NewValue);")]
+    public const string CarriageReturnReplace = "CarriageReturnReplace";
+
+    [Description("Ztring CarriageReturnReplace_Get();")]
+    public const string CarriageReturnReplace_Get = "CarriageReturnReplace_Get";
+
+    [Description("void StreamMax_Set(const ZtringListList &NewValue);")]
+    public const string StreamMax = "StreamMax";
+
+    [Description("Ztring StreamMax_Get();")]
+    public const string StreamMax_Get = "StreamMax_Get";
 
     /// <summary>
     /// Sets the output language (e.g., "en" for English, "fr" for French).
+    /// https://github.com/MediaArea/MediaInfo/blob/master/Source/Resource/Language.csv
+    /// <see cref="Language_ISO639"/><see cref="LanguageExtension"/>
     /// </summary>
-    public const string Language = nameof(Language);
+    [Description("void Language_Set(const ZtringListList &NewLanguage);")]
+    public const string Language = "Language";
+
+    [Description("Ztring Language_Get();")]
+    public const string Language_Get = "Language_Get";
+
+    [Description("void Inform_Set(const ZtringListList &NewInform);")]
+    public const string Inform = "Inform";
+
+    [Description("Ztring Inform_Get();")]
+    public const string Inform_Get = "Inform_Get";
+
+    [Description("void Inform_Version_Set(bool NewValue);")]
+    public const string Inform_Version_Set = "Inform_Version";
+
+    [Description("bool Inform_Version_Get();")]
+    public const string Inform_Version_Get = "Inform_Version_Get";
+
+    [Description("void Inform_Timestamp_Set(bool NewValue);")]
+    public const string Inform_Timestamp = "Inform_Timestamp";
+
+    [Description("bool Inform_Timestamp_Get();")]
+    public const string Inform_Timestamp_Get = "Inform_Timestamp_Get";
+
+    [Description("InfoMap &Format_Get();")]
+    public const string Format_Get = "Format_Get";
+
+    [Description("const Ztring &Codec_Get(private const Ztring &Value, private infocodec_t KindOfCodecInfo = InfoCodec_Name);")]
+    public const string Codec_Get = "Codec_Get";
+
+    [Description("void AcquisitionDataOutputMode_Set(size_t Value);")]
+    public const string AcquisitionDataOutputMode = "AcquisitionDataOutputMode";
+
+    [Description("size_t AcquisitionDataOutputMode_Get();")]
+    public const string AcquisitionDataOutputMode_Get = "AcquisitionDataOutputMode_Get";
+
+    public static class Returns
+    {
+        public const string Frame = "Frame";
+        public const string Container = "Container";
+        public const string Elementary = "Elementary";
+        public const string OptionNotKnown = "Option not known";
+    }
+
+    public enum Trace_Format
+    {
+        Trace_Format_Tree,
+        Trace_Format_CSV,
+        Trace_Format_XML,
+        Trace_Format_MICRO_XML,
+    };
+
+    public enum Inform_Format
+    {
+        Tree,
+        Text,
+        CSV,
+        HTML,
+        XML,
+        MAXML,
+        JSON,
+    }
 
     /// <summary>
-    /// Sets a custom output format.
-    /// Example: "Inform=General;%FileName%" outputs the file name.
+    /// Language_ISO639;ar;be;bg;ca;cs;da;de;en;es;eu;fa;fr;gl;gr;hu;id;it;ja;ko;lt;nl;pl;pt;pt-BR;ro;ru;sk;sq;sv;th;tr;uk;zh-CN;zh-HK;zh-TW;hr;hy;ka
     /// </summary>
-    public const string Inform = nameof(Inform);
+    public enum Language_ISO639
+    {
+        [Description("en")] English,
+        [Description("fr")] French,
+        [Description("de")] German,
+        [Description("es")] Spanish,
+        [Description("it")] Italian,
+        [Description("ja")] Japanese,
+        [Description("ko")] Korean,
+        [Description("zh-CN")] ChineseSimplified,
+        [Description("zh-HK")] ChineseTraditional,
+        [Description("ru")] Russian,
+        [Description("pt")] Portuguese,
+        [Description("pt-BR")] PortugueseBrazilian,
+        [Description("nl")] Dutch,
+        [Description("sv")] Swedish,
+        [Description("da")] Danish,
+        [Description("fi")] Finnish,
+        [Description("no")] Norwegian,
+        [Description("pl")] Polish,
+        [Description("cs")] Czech,
+        [Description("sk")] Slovak,
+        [Description("hu")] Hungarian,
+        [Description("bg")] Bulgarian,
+        [Description("uk")] Ukrainian,
+        [Description("ro")] Romanian,
+        [Description("hr")] Croatian,
+        [Description("sr")] Serbian,
+        [Description("sl")] Slovenian,
+        [Description("mk")] Macedonian,
+        [Description("lt")] Lithuanian,
+        [Description("lv")] Latvian,
+        [Description("et")] Estonian,
+        [Description("gr")] Greek,
+        [Description("tr")] Turkish,
+        [Description("fa")] Persian,
+        [Description("ar")] Arabic,
+        [Description("he")] Hebrew,
+        [Description("id")] Indonesian,
+        [Description("th")] Thai,
+        [Description("hy")] Armenian,
+        [Description("ka")] Georgian,
+    }
+}
 
-    /// <summary>
-    /// Sets the output format (e.g., "Text", "XML", "HTML", "JSON").
-    /// </summary>
-    public const string Output = nameof(Output);
+public static class LanguageExtension
+{
+    public static string ToOption(this Language_ISO639 language_ISO639)
+    {
+        if (typeof(Language_ISO639)
+            .GetField(language_ISO639.ToString())
+            .GetCustomAttributes(typeof(DescriptionAttribute), false)
+            .FirstOrDefault() is DescriptionAttribute { } attr)
+        {
+            return attr.Description;
+        }
 
-    /// <summary>
-    /// Sets whether to display complete information (default is "1" for enabled).
-    /// </summary>
-    public const string Complete = nameof(Complete);
+        // Fallback to default language.
+        return "en";
+    }
 
-    /// <summary>
-    /// Sets whether to enable continuous file name testing when processing multiple files.
-    /// </summary>
-    public const string File_TestContinuousFileNames = nameof(File_TestContinuousFileNames);
+    public static string ToOption(this CultureInfo culture)
+    {
+        string language_iso639 = culture.Name switch
+        {
+            "zh" => "zh-CN",
+            "zh-CN" or "zh-HK" or "zh-TW" or "pt-BR" => culture.Name,
+            _ => culture.TwoLetterISOLanguageName,
+        };
 
-    /// <summary>
-    /// Sets whether the file is seekable ("1" for seekable, "0" for non-seekable).
-    /// </summary>
-    public const string File_IsSeekable = nameof(File_IsSeekable);
+        if (Array.IndexOf(
+            "ar;be;bg;ca;cs;da;de;en;es;eu;fa;fr;gl;gr;hu;id;it;ja;ko;lt;nl;pl;pt;pt-BR;ro;ru;sk;sq;sv;th;tr;uk;zh-CN;zh-HK;zh-TW;hr;hy;ka".Split(';'),
+            language_iso639) < 0)
+        {
+            // Fallback to default language.
+            return "en";
+        }
 
-    /// <summary>
-    /// Controls the parsing speed (e.g., "1.0" for normal speed, "0.5" for half speed).
-    /// </summary>
-    public const string ParseSpeed = nameof(ParseSpeed);
+        return language_iso639;
+    }
 
-    /// <summary>
-    /// Sets whether to enable demuxing mode ("1" for enabled, "0" for disabled).
-    /// </summary>
-    public const string Demux = nameof(Demux);
+    public static string ToOptionValue(this CultureInfo culture, Encoding? encoding = null)
+    {
+        // https://github.com/MediaArea/MediaInfo/tree/master/Source/Resource/Plugin/Language
+        string name = $"MediaInfoNet.Resource.Plugin.Language.{culture.ToOption()}.csv";
+        using Stream stream = typeof(MediaInfo).Assembly.GetManifestResourceStream(name);
+        using StreamReader reader = new(stream, encoding ?? Encoding.UTF8);
+        StringBuilder result = new();
+        char[] buffer = new char[(int)reader.BaseStream.Length];
+        int count;
 
-    /// <summary>
-    /// Sets whether to extract cover image data ("1" for extraction, "0" for no extraction).
-    /// </summary>
-    public const string Cover_Data = nameof(Cover_Data);
+        while ((count = reader.Read(buffer, 0, buffer.Length)) > 0)
+        {
+            result.Append(buffer, 0, count);
+        }
 
-    /// <summary>
-    /// Sets whether to enable internet access for fetching additional information ("1" for enabled).
-    /// </summary>
-    public const string Internet = nameof(Internet);
-
-    /// <summary>
-    /// Sets a custom information template.
-    /// </summary>
-    public const string CustomInform = nameof(CustomInform);
+        return result.ToString();
+    }
 }
 
 public class MediaInfo : IDisposable

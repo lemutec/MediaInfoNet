@@ -15,6 +15,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 using MediaInfoLib;
+using System.Globalization;
 
 namespace MediaInfoLib_MSCS;
 
@@ -78,6 +79,13 @@ public class CLI
 
         ToDisplay += "\r\n\r\nGet with Stream=Audio and Parameter='StreamCount'\r\n";
         ToDisplay += MI.Get(StreamKind.Audio, 0, "StreamCount");
+
+        MI.Option("Inform", "HTML");
+        ToDisplay += MI.Inform();
+
+        MI.Option("Inform", "TREE");
+        MI.Option("Language", new CultureInfo("zh-CN").ToOptionValue());
+        ToDisplay += MI.Inform();
 
         ToDisplay += "\r\n\r\nClose\r\n";
         MI.Close();
