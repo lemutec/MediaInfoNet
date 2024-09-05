@@ -10,7 +10,7 @@ Nuget：https://www.nuget.org/packages/MediaInfoDLL
 
 ## Usage
 
-1. Provide Media Inform
+1. Provide the Media Inform.
 
 ```c#
 using MediaInfoLib;
@@ -20,18 +20,18 @@ lib.Open(@"C:\media.mp4");
 Console.WriteLine(lib.Inform());
 ```
 
-if you wanna completed inform.
+If you want the Complete Media Inform.
 
 ```c#
 using MediaInfoLib;
 
 using MediaInfo lib = new();
-lib.Open(fileName);
+lib.Open(@"C:\media.mp4");
 lib.Option("Complete", "1");
 Console.WriteLine(lib.Inform());
 ```
 
-2. Check audio track exists
+2. Check audio track exists.
 
 ```C#
 using MediaInfoLib;
@@ -41,7 +41,7 @@ bool hasAudio = lib.WithOpen(fileName).Count_Get(StreamKind.Audio) > 0;
 Console.WriteLine(hasAudio);
 ```
 
-3. Get audio track parameter
+3. Get audio track parameter.
 
 ```C#
 using MediaInfoLib;
