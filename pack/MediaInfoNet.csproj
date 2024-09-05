@@ -22,7 +22,7 @@
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageIcon>MediaInfo.png</PackageIcon>
     </PropertyGroup>
-  
+
     <ItemGroup>
     <None Include="..\LICENSE">
         <Pack>True</Pack>
@@ -45,7 +45,7 @@
         <PackagePath>lib\netstandard2.0\x86\MediaInfo.dll</PackagePath>
     </Content>
     </ItemGroup>
-  
+
     <ItemGroup>
     <None Update="MediaInfo.png">
         <Pack>True</Pack>

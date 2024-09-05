@@ -20,6 +20,17 @@ lib.Open(@"C:\media.mp4");
 Console.WriteLine(lib.Inform());
 ```
 
+if you wanna completed inform.
+
+```c#
+using MediaInfoLib;
+
+using MediaInfo lib = new();
+lib.Open(fileName);
+lib.Option("Complete", "1");
+Console.WriteLine(lib.Inform());
+```
+
 2. Check audio track exists
 
 ```C#

@@ -15,6 +15,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace MediaInfoLib;
@@ -39,7 +40,7 @@ public enum InfoKind
     NameText,
     MeasureText,
     Info,
-    HowTo
+    HowTo,
 }
 
 public enum InfoOptions
@@ -47,7 +48,7 @@ public enum InfoOptions
     ShowInInform,
     Support,
     ShowInSupported,
-    TypeOfValue
+    TypeOfValue,
 }
 
 [Flags]
@@ -56,7 +57,7 @@ public enum InfoFileOptions
     FileOption_Nothing = 0x00,
     FileOption_NoRecursive = 0x01,
     FileOption_CloseAll = 0x02,
-    FileOption_Max = 0x04
+    FileOption_Max = 0x04,
 };
 
 [Flags]
@@ -69,10 +70,104 @@ public enum Status
     Finalized = 0x08,
 }
 
-public sealed class Libs
+public static class Libs
 {
     public const string Windows = "MediaInfo.dll";
     public const string MacOS = "libmediainfo.dylib";
+
+    public static void LoadDll(string dllPath)
+    {
+        if (!SetDllDirectory(dllPath))
+        {
+            throw new Win32Exception(Marshal.GetLastWin32Error());
+        }
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        static extern bool SetDllDirectory(string lpPathName);
+    }
+}
+
+/// <summary>
+/// Contains constants for the options available in MediaInfo.
+/// Each constant represents a parameter that can be used with MediaInfo_Option.
+/// </summary>
+public static class Options
+{
+    /// <summary>
+    /// Gets the version of MediaInfo.
+    /// </summary>
+    public const string Info_Version = nameof(Info_Version);
+
+    /// <summary>
+    /// Gets the list of all supported parameters.
+    /// </summary>
+    public const string Info_Parameters = nameof(Info_Parameters);
+
+    /// <summary>
+    /// Gets the capacities information, such as supported formats.
+    /// </summary>
+    public const string Info_Capacities = nameof(Info_Capacities);
+
+    /// <summary>
+    /// Gets the list of supported codecs.
+    /// </summary>
+    public const string Info_Codecs = nameof(Info_Codecs);
+
+    /// <summary>
+    /// Sets the output language (e.g., "en" for English, "fr" for French).
+    /// </summary>
+    public const string Language = nameof(Language);
+
+    /// <summary>
+    /// Sets a custom output format.
+    /// Example: "Inform=General;%FileName%" outputs the file name.
+    /// </summary>
+    public const string Inform = nameof(Inform);
+
+    /// <summary>
+    /// Sets the output format (e.g., "Text", "XML", "HTML", "JSON").
+    /// </summary>
+    public const string Output = nameof(Output);
+
+    /// <summary>
+    /// Sets whether to display complete information (default is "1" for enabled).
+    /// </summary>
+    public const string Complete = nameof(Complete);
+
+    /// <summary>
+    /// Sets whether to enable continuous file name testing when processing multiple files.
+    /// </summary>
+    public const string File_TestContinuousFileNames = nameof(File_TestContinuousFileNames);
+
+    /// <summary>
+    /// Sets whether the file is seekable ("1" for seekable, "0" for non-seekable).
+    /// </summary>
+    public const string File_IsSeekable = nameof(File_IsSeekable);
+
+    /// <summary>
+    /// Controls the parsing speed (e.g., "1.0" for normal speed, "0.5" for half speed).
+    /// </summary>
+    public const string ParseSpeed = nameof(ParseSpeed);
+
+    /// <summary>
+    /// Sets whether to enable demuxing mode ("1" for enabled, "0" for disabled).
+    /// </summary>
+    public const string Demux = nameof(Demux);
+
+    /// <summary>
+    /// Sets whether to extract cover image data ("1" for extraction, "0" for no extraction).
+    /// </summary>
+    public const string Cover_Data = nameof(Cover_Data);
+
+    /// <summary>
+    /// Sets whether to enable internet access for fetching additional information ("1" for enabled).
+    /// </summary>
+    public const string Internet = nameof(Internet);
+
+    /// <summary>
+    /// Sets a custom information template.
+    /// </summary>
+    public const string CustomInform = nameof(CustomInform);
 }
 
 public class MediaInfo : IDisposable
