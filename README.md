@@ -20,14 +20,16 @@ lib.Open(@"C:\media.mp4");
 Console.WriteLine(lib.Inform());
 ```
 
-If you want the Complete Media Inform.
+Useful options.
 
 ```c#
 using MediaInfoLib;
 
 using MediaInfo lib = new();
 lib.Open(@"C:\media.mp4");
-lib.Option("Complete", "1");
+lib.Option("Complete", "1"); // Set complete output.
+lib.Option("Inform", Inform_Format.HTML.ToString()); // Set format to HTML.
+lib.Option("Language", Language_ISO639.ChineseSimplified.ToIso639()); // Set language to Chinese.
 Console.WriteLine(lib.Inform());
 ```
 

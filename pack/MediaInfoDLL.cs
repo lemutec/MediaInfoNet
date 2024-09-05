@@ -361,49 +361,34 @@ public static class Options
 
 public static class LanguageExtension
 {
-    public static string ToOption(this Language_ISO639 language_ISO639)
+    public static string ToIso639(this Language_ISO639 language_ISO639)
+    {
+        return language_ISO639.ToCultureInfo().ToIso639();
+    }
+
+    public static CultureInfo ToCultureInfo(this Language_ISO639 language_ISO639)
     {
         if (typeof(Language_ISO639)
             .GetField(language_ISO639.ToString())
             .GetCustomAttributes(typeof(DescriptionAttribute), false)
             .FirstOrDefault() is DescriptionAttribute { } attr)
         {
-            return attr.Description;
+            return CultureInfo.GetCultureInfo(attr.Description);
         }
 
         // Fallback to default language.
-        return "en";
+        return CultureInfo.GetCultureInfo("en");
     }
 
-    public static string ToOption(this CultureInfo culture)
-    {
-        string language_iso639 = culture.Name switch
-        {
-            "zh" => "zh-CN",
-            "zh-CN" or "zh-HK" or "zh-TW" or "pt-BR" => culture.Name,
-            _ => culture.TwoLetterISOLanguageName,
-        };
-
-        if (Array.IndexOf(
-            "ar;be;bg;ca;cs;da;de;en;es;eu;fa;fr;gl;gr;hu;id;it;ja;ko;lt;nl;pl;pt;pt-BR;ro;ru;sk;sq;sv;th;tr;uk;zh-CN;zh-HK;zh-TW;hr;hy;ka".Split(';'),
-            language_iso639) < 0)
-        {
-            // Fallback to default language.
-            return "en";
-        }
-
-        return language_iso639;
-    }
-
-    public static string ToOptionValue(this CultureInfo culture, Encoding? encoding = null)
+    public static string ToIso639(this CultureInfo culture, Encoding? encoding = null)
     {
         // https://github.com/MediaArea/MediaInfo/tree/master/Source/Resource/Plugin/Language
-        string name = $"MediaInfoNet.Resource.Plugin.Language.{culture.ToOption()}.csv";
+        string name = $"MediaInfoNet.Resource.Plugin.Language.{MakeSure(culture)}.csv";
         using Stream stream = typeof(MediaInfo).Assembly.GetManifestResourceStream(name);
         using StreamReader reader = new(stream, encoding ?? Encoding.UTF8);
         StringBuilder result = new();
         char[] buffer = new char[(int)reader.BaseStream.Length];
-        int count;
+        int count = default;
 
         while ((count = reader.Read(buffer, 0, buffer.Length)) > 0)
         {
@@ -411,6 +396,26 @@ public static class LanguageExtension
         }
 
         return result.ToString();
+
+        static CultureInfo MakeSure(CultureInfo culture)
+        {
+            string language_iso639 = culture.Name switch
+            {
+                "zh" => "zh-CN",
+                "zh-CN" or "zh-HK" or "zh-TW" or "pt-BR" => culture.Name,
+                _ => culture.TwoLetterISOLanguageName,
+            };
+
+            if (Array.IndexOf(
+                "ar;be;bg;ca;cs;da;de;en;es;eu;fa;fr;gl;gr;hu;id;it;ja;ko;lt;nl;pl;pt;pt-BR;ro;ru;sk;sq;sv;th;tr;uk;zh-CN;zh-HK;zh-TW;hr;hy;ka".Split(';'),
+                language_iso639) < 0)
+            {
+                // Fallback to default language.
+                return CultureInfo.GetCultureInfo("en");
+            }
+
+            return CultureInfo.GetCultureInfo(language_iso639);
+        }
     }
 }
 
