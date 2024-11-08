@@ -21,6 +21,7 @@
         <PackageTags>mediainfo</PackageTags>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageIcon>MediaInfo.png</PackageIcon>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
 	<ItemGroup>
