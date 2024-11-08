@@ -1,4 +1,4 @@
-name: MediaInfoDLL Library
+name: pack
 
 on:
   release:
