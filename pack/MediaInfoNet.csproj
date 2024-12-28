@@ -2,12 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <LangVersion>12.0</LangVersion>
+        <LangVersion>latest</LangVersion>
         <AssemblyName>MediaInfoDLL</AssemblyName>
-        <PackageVersion>24.11.0</PackageVersion>
-        <AssemblyVersion>24.11.0</AssemblyVersion>
-        <FileVersion>24.11.0</FileVersion>
-        <Version>$(VersionPrefix)24.11.0</Version>
+        <PackageVersion>24.12.0</PackageVersion>
+        <AssemblyVersion>24.12.0</AssemblyVersion>
+        <FileVersion>24.12.0</FileVersion>
+        <Version>$(VersionPrefix)24.12.0</Version>
         <Authors>Lemutec</Authors>
         <Company>Lemutec</Company>
         <Nullable>enable</Nullable>
@@ -24,30 +24,35 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
-	<ItemGroup>
+    <ItemGroup>
         <None Include="..\LICENSE">
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>
-		
+        
         <None Include="..\README.md">
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>
-		
+        
         <None Include="build\package.targets" Pack="True" PackagePath="\build\$(PackageId).targets" />
         <None Include="build\package.props" Pack="True" PackagePath="\build\$(PackageId).props" />
         <None Include="buildTransitive\package.targets" Pack="True" PackagePath="\buildTransitive\$(PackageId).targets" />
         <None Include="buildTransitive\package.props" Pack="True" PackagePath="\buildTransitive\$(PackageId).props" />
-		
+        
         <Content Include="..\lib\x64\MediaInfo.dll">
             <Pack>True</Pack>
             <PackagePath>lib\netstandard2.0\x64\MediaInfo.dll</PackagePath>
         </Content>
-		
+        
         <Content Include="..\lib\x86\MediaInfo.dll">
             <Pack>True</Pack>
             <PackagePath>lib\netstandard2.0\x86\MediaInfo.dll</PackagePath>
+        </Content>
+
+        <Content Include="..\lib\arm64\MediaInfo.dll">
+            <Pack>True</Pack>
+            <PackagePath>lib\netstandard2.0\arm64\MediaInfo.dll</PackagePath>
         </Content>
     </ItemGroup>
 
@@ -58,18 +63,18 @@
         </None>
     </ItemGroup>
 
-	<ItemGroup>
-		<Resource Include="Resource\Plugin\Custom\*.csv" />
-		<Resource Include="Resource\Plugin\Language\*.csv" />
-		<Resource Include="Resource\Plugin\Sheet\*.csv" />
-		<Resource Include="Resource\Plugin\Tree\*.csv" />
-	</ItemGroup>
+    <ItemGroup>
+        <Resource Include="Resource\Plugin\Custom\*.csv" />
+        <Resource Include="Resource\Plugin\Language\*.csv" />
+        <Resource Include="Resource\Plugin\Sheet\*.csv" />
+        <Resource Include="Resource\Plugin\Tree\*.csv" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<EmbeddedResource Include="Resource\Plugin\Custom\*.csv" />
-		<EmbeddedResource Include="Resource\Plugin\Language\*.csv" />
-		<EmbeddedResource Include="Resource\Plugin\Sheet\*.csv" />
-		<EmbeddedResource Include="Resource\Plugin\Tree\*.csv" />
-	</ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Resource\Plugin\Custom\*.csv" />
+        <EmbeddedResource Include="Resource\Plugin\Language\*.csv" />
+        <EmbeddedResource Include="Resource\Plugin\Sheet\*.csv" />
+        <EmbeddedResource Include="Resource\Plugin\Tree\*.csv" />
+    </ItemGroup>
 
 </Project>

@@ -4,7 +4,7 @@
 
 Minimal MediaInfo .NET APIs wrapped from [MediaArea.net](https://mediaarea.net/en/MediaInfo/Download/Windows).
 
-Support for Windows Vista, 7, 8, 10, 11 with x86, x64.
+Support for Windows Vista, 7, 8, 10, 11 with x86, x64, ARM64.
 
 ## Usage
 

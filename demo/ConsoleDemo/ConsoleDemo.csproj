@@ -2,8 +2,8 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net8.0</TargetFramework>
-		<LangVersion>12.0</LangVersion>
+		<TargetFramework>net9.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
@@ -13,7 +13,7 @@
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="xcopy $(ProjectDir)..\..\lib\x64\MediaInfo.dll $(ProjectDir)bin\$(Configuration)\net8.0\ /y /e /d&#xD;&#xA;" />
+		<Exec Command="xcopy $(ProjectDir)..\..\lib\x64\MediaInfo.dll $(ProjectDir)bin\$(Configuration)\net9.0\ /y /e /d&#xD;&#xA;" />
 	</Target>
 
 </Project>

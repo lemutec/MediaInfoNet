@@ -6,8 +6,9 @@
 	<Target Name="CopyMediaInfoDll" BeforeTargets="AfterCompile">
 		<ItemGroup>
 			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\x64\MediaInfo.dll" Condition="'$(PlatformTarget)' == 'x64'" />
-			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\x86\MediaInfo.dll" Condition="'$(PlatformTarget)' != 'x64' and '$(PlatformTarget)' != 'x86'" />
 			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\x86\MediaInfo.dll" Condition="'$(PlatformTarget)' == 'x86'" />
+			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\arm64\MediaInfo.dll" Condition="'$(PlatformTarget)' == 'ARM64'" />
+			<MediaInfoDll Include="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\x86\MediaInfo.dll" Condition="'$(PlatformTarget)' != 'x64' and '$(PlatformTarget)' != 'x86' and '$(PlatformTarget)' != 'ARM64'" />
 		</ItemGroup>
 
 		<Copy SourceFiles="@(MediaInfoDll)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="True" />
