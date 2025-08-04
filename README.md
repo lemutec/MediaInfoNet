@@ -55,11 +55,10 @@ Console.WriteLine(bitRate);
 ## Examples
 
 1. [ConsoleDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/ConsoleDemo) for Console Application.
-
 2. [WinFormsDemo](https://github.com/lemutec/MediaInfoNet/tree/main/demo/WinFormsDemo) for [WinForms](https://github.com/dotnet/winforms) Application.
-
 3. [VSEnc](https://github.com/lemutec/VSEnc) for [WPF](https://github.com/dotnet/wpf) Application.
-4. [LyricStudio](https://github.com/lemutec/LyricStudio) for [Avalonia](https://github.com/AvaloniaUI/Avalonia) Application.
+4. [QuickLook](https://github.com/QL-Win/QuickLook) for [WPF](https://github.com/dotnet/wpf) Application.
+5. [LyricStudio](https://github.com/lemutec/LyricStudio) for [Avalonia](https://github.com/AvaloniaUI/Avalonia) Application.
 
 ## Runtimes
 
