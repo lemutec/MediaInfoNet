@@ -61,6 +61,30 @@ Console.WriteLine(bitRate);
 3. [VSEnc](https://github.com/lemutec/VSEnc) for [WPF](https://github.com/dotnet/wpf) Application.
 4. [LyricStudio](https://github.com/lemutec/LyricStudio) for [Avalonia](https://github.com/AvaloniaUI/Avalonia) Application.
 
+## Runtimes
+
+How to include the all `MediaInfo.dll` runtime native libraries in `.csproj`:
+
+```xml
+<ItemGroup>
+    <Content Include="$(NuGetPackageRoot)\MediaInfoDLL\25.7.0\lib\netstandard2.0\x64\MediaInfo.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <DestinationFolder>$(OutDir)MediaInfo-x64\</DestinationFolder>
+        <Link>runtime-x64\MediaInfo.dll</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)\MediaInfoDLL\25.7.0\lib\netstandard2.0\x86\MediaInfo.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <DestinationFolder>$(OutDir)MediaInfo-x86\</DestinationFolder>
+        <Link>runtime-x86\MediaInfo.dll</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)\MediaInfoDLL\25.7.0\lib\netstandard2.0\arm64\MediaInfo.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <DestinationFolder>$(OutDir)MediaInfo-ARM64\</DestinationFolder>
+        <Link>runtime-arm64\MediaInfo.dll</Link>
+    </Content>
+</ItemGroup>
+```
+
 ## References
 
 https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/MediaInfo_Config.h
