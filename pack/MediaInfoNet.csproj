@@ -4,10 +4,10 @@
         <targetframeworks>net462;net472;net48;netstandard2.0;netstandard2.1</targetframeworks>
         <LangVersion>latest</LangVersion>
         <AssemblyName>MediaInfoDLL</AssemblyName>
-        <PackageVersion>25.4.0</PackageVersion>
-        <AssemblyVersion>25.4.0</AssemblyVersion>
-        <FileVersion>25.4.0</FileVersion>
-        <Version>$(VersionPrefix)25.4.0</Version>
+        <PackageVersion>25.7.0</PackageVersion>
+        <AssemblyVersion>25.7.0</AssemblyVersion>
+        <FileVersion>25.7.0</FileVersion>
+        <Version>$(VersionPrefix)25.7.0</Version>
         <Authors>Lemutec</Authors>
         <Company>Lemutec</Company>
         <Nullable>enable</Nullable>
