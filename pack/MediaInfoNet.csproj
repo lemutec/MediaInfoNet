@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <targetframeworks>net462;net472;net48;netstandard2.0;netstandard2.1</targetframeworks>
         <LangVersion>latest</LangVersion>
         <AssemblyName>MediaInfoDLL</AssemblyName>
         <PackageVersion>25.4.0</PackageVersion>
@@ -57,7 +57,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Update="MediaInfo.png">
+        <None Include="MediaInfo.png">
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>
