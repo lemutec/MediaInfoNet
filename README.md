@@ -84,6 +84,15 @@ How to include the all `MediaInfo.dll` runtime native libraries in `.csproj`:
 </ItemGroup>
 ```
 
+and remove the auto copying library:
+
+```xml
+<Target Name="ReduceReleasePackaging" AfterTargets="Build">
+    <!-- MediaInfoDLL will copy the MediaInfo.dll file according to the architecture, we do not use this usage so delete it manually -->
+    <Delete Files="$(OutputPath)\MediaInfo.dll" Condition="Exists('$(OutputPath)\MediaInfo.dll')" />
+</Target>
+```
+
 ## References
 
 https://github.com/MediaArea/MediaInfoLib/blob/master/Source/MediaInfo/MediaInfo_Config.h
