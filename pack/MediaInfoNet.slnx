@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Samples/">
+    <Project Path="../demo/ConsoleDemo/ConsoleDemo.csproj" />
+    <Project Path="../demo/WinFormsDemo/WinFormsDemo.csproj" />
+  </Folder>
+  <Project Path="MediaInfoNet.csproj" />
+</Solution>
