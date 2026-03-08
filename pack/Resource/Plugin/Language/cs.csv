@@ -14,8 +14,8 @@
  bit1; bit
  bit2; bits
  bit3; bits
- bps; b/s
  Bps; B/s
+ bps; b/s
  Byte1; Byte
  Byte2; Bytes
  Byte3; Bytes
@@ -49,8 +49,8 @@
  frame3;
  GB; GB
  Gb; Gb
- Gbps; Gb/s
  GBps; GB/s
+ Gbps; Gb/s
  GHz; GHz
  GiB; GiB
  GibiByte1; GibiBytes
@@ -91,8 +91,8 @@
  KiloByte3; KiloBytes
  MB; MB
  Mb; Mb
- Mbps; Mb/s
  MBps; MebiBytes
+ Mbps; Mb/s
  MebiBit1; MebiBit
  MebiBit2; MebiBits
  MebiBit3; MebiBits
@@ -161,7 +161,9 @@
 7.1ch;
 About;O programu
 About_Hint;O programu
+AC3_Metadata;
 Accompaniment;Accompaniment
+acmod;
 Active_DisplayAspectRatio;
 Active_Height;
 Active_Width;
@@ -177,9 +179,9 @@ AdID;
 ADM: Show ChannelFormats;
 ADM: Show TrackUIDs;
 AdmProfile;
-Advanced;Pokročilé
-Advanced mode;Více detailů
 Advanced mode -->;
+Advanced mode;Více detailů
+Advanced;Pokročilé
 Album;Album
 Album_ReplayGain_Gain;
 Album_ReplayGain_Peak;
@@ -187,18 +189,24 @@ Alignment;
 Alignment_Aligned;
 Alignment_Split;
 All;Vše
+AllFields;
 AlternateGroup;
+AnalyzeServicesMenu;
+App_About;O aplikaci MediaInfo
+App_Hide;Skrýt MediaInfo
+App_Quit;Ukončit MediaInfo
 Archival_Location;Archival location
 Arranger;Arranger
 ArtDirector;ArtDirector
 AspectRatio;Poměr stran
 AssistantDirector;AssistantDirector
 AssociatedVideo_FrameRate;
-at;at
 At least one file;(You must at least open one file)
+at;at
 Attachments;
-Audio;Audio
 Audio stream(s);Audio streamy
+Audio;Audio
+Audio_Channels_Total;
 Audio_Codec_List;Audio kodeky
 Audio_Format_List;
 Audio_Format_WithHint_List;
@@ -238,6 +246,9 @@ BitRate_Mode_CBR;
 BitRate_Mode_VBR;
 BitRate_Nominal;
 Bits-(Pixel*Frame);Bits/(Pixel*Frame)
+BitstreamLevel;
+Bring All to Front;Převést vše do popředí
+bsid;
 BufferSize;
 Cancel;Zrušit
 CaptionServiceName;
@@ -253,8 +264,8 @@ ChannelMode;
 ChannelPositions;Channel positions
 ChannelPositions_Original;
 Chapter(s);Kapitola(y)
-Chapters;Kapitoly
 Chapters stream(s);Chapters stream(s)
+Chapters;Kapitoly
 Chapters_Codec_List;Chapters Codecs
 Chapters_No;No chapters
 Chapters_Pos_Begin;
@@ -262,9 +273,9 @@ Chapters_Pos_End;
 ChaptersCount;Count of chapter streams
 CharacterSet;
 CheckNewVersion;Zkontrolovat novou verzi
-Choose custom;Choose custom
 Choose custom sheet;Vyberte požadovaný formát zobrazení
 Choose custom text;Vyberte vlastní nastavení textu
+Choose custom;Choose custom
 Choose export format;Vyberte požadovaný exportní formát
 Choose file(s);Vyberte soubor k otevření
 Choose filename;Choose your desired filename
@@ -274,11 +285,15 @@ Chroma;Chroma
 ChromaSubsampling;
 Classifier;
 ClearList;
-Close;Zavřít
 Close all before open;Zavřít vše před otevřením nového
+Close;Zavřít
+CloseAll;
 ClosedCaptionsLanguage;
 ClosedCaptionsPresent;
 ClosedCaptionsType;
+CloseFile;
+CloseWindow;Zavřít okno
+cmixlev;
 Codec;
 Codec_Description;
 Codec_Info;Details for codec
@@ -308,10 +323,16 @@ ColorTheme;
 ColorTheme_Dark;
 ColorTheme_Light;
 ColorTheme_System;
+colour_description_present;
+colour_description_present_Source;
 colour_primaries;
+colour_primaries_Source;
 colour_range;
+colour_range_Source;
 Comment;Komentář
 CommissionedBy;Commissioned by
+Compare;
+CompareView;
 Compilation;
 ComplementaryObject;
 CompleteName;Celý název a cesta
@@ -322,6 +343,7 @@ Compression_Mode;
 Compression_Mode_Lossless;
 Compression_Mode_Lossy;
 Compression_Ratio;
+comprprof;
 Conductor;Conductor
 ConformanceCheck;
 ConformanceErrors;
@@ -333,6 +355,7 @@ Container and general information;Hlavní informace
 Content;
 ContentType;ContentType
 CoProducer;Coproducer
+Copy;Kopírovat
 Copyright;Copyright
 CopyrightYear;
 CostumeDesigner;Costume designer
@@ -344,6 +367,7 @@ Cover_Description;
 Cover_Mime;
 Cover_Type;
 CoverData;
+CreatedOn;
 Cropped;
 Custom;Vlastní
 CustomDownmixTargets;
@@ -352,10 +376,11 @@ DarkMode;
 Date;Datum
 Debug;Pokročilé
 Decimal point;Decimal point
-Default;
 Default translation;
+Default;
 Default_Setting;
 DefaultTargetDeviceConfig;
+DefaultView;
 Delay;Delay
 Delay_Source;
 Delay_Source_Container;
@@ -364,6 +389,10 @@ Delete;Odstranit
 Description;Description
 Details;
 dialnorm;
+dialnorm_Average;
+dialnorm_Count;
+dialnorm_Maximum;
+dialnorm_Minimum;
 DialogueCorrected;
 DialogueEnhancement;
 DialogueNormalization;
@@ -386,6 +415,8 @@ Dolby_Atmos_Metadata;
 DolbyAtmos;
 Donate;Zaslat finanční dar
 DotsPerInch;
+DownloadFile;
+DownloadFileError;
 Downmix;
 Downmix_5.1.x;
 Downmix_5to2;
@@ -400,6 +431,7 @@ Duration_Start_Command;
 Duration_Start2End;
 DynamicObject;
 DynamicRangeControl;
+dynrngprof;
 Eac3DrcProfile;
 Edit;Upravit
 EditedBy;Upravil
@@ -409,7 +441,10 @@ ElementCount;
 EMail;E-Mail
 Enable FFmpeg plugin;
 Encoded_Application;Použitý software
+Encoded_Application_Name;
+Encoded_Application_Version;
 Encoded_Date;Encoded date
+Encoded_Hardware;
 Encoded_Library;Enkódoval
 Encoded_Library_Name;
 Encoded_Library_Settings;Nastavení enkoderu
@@ -418,8 +453,11 @@ Encoded_Original;Originál
 EncodedBy;Enkódoval
 EPG_Positions;
 EpisodeTitleNumber;
+Error;
 Error_File;Error while reading file
 Error_File_Write;
+Error_Open;
+Error_Save;
 Events_MinDuration;
 Events_PaintOn;
 Events_PopOn;
@@ -434,8 +472,13 @@ Extensions;Extensions usually used
 External_Media_NotMounted;
 Family;
 Fax;Fax
-File;Soubor
+Feature_AdvancedMode;
+Feature_FilesCompare;
+Feature_More;
+Feature_SelectView;
+Field;
 File size;Velikost souboru
+File;Soubor
 File_Append;Append to the existing file (Warning : be careful to have the same parameters)
 File_Created_Date;
 File_Created_Date_Local;
@@ -453,10 +496,10 @@ FirstDisplay_Type;
 FirstFrameOfAction;
 FlatPanelTv;
 FlowID;
-Folder;Složka
 Folder (R);Složka (R)
 Folder (R)_Hint;Select a folder to study (with all folders recursively)
 Folder (Recursively);Folder (Recursively)
+Folder;Složka
 Folder_Hint;Otevřít vše ve složce
 FolderName;Název složky
 Forced;
@@ -517,6 +560,7 @@ FrameRate_Num;
 FrameRate_Original;
 FrameRate_Real;
 FullParsing;
+FullParsingTips;
 Gallery;
 General;Hlavní
 GeneralCompliance;
@@ -729,6 +773,7 @@ Height;Výška
 Height_CleanAperture;
 Height_Original;
 Help;Nápověda
+HideOthers;Skrýt ostatní
 Hint;
 HomeTheaterAvr;
 How many audio streams?;How many audio streams?
@@ -739,8 +784,8 @@ HTML;HTML
 ID;ID
 IdentClockStart;
 IFrameInterval;
-Image;Obrázek
 Image stream(s);Image streams
+Image;Obrázek
 Image_Codec_List;Codecs Image
 ImageCount;Count of image streams
 ImmersiveStereo;
@@ -881,6 +926,7 @@ Language_lv;Latvian
 Language_mg;Malagasy
 Language_mh;Marshallese
 Language_mi;Maori
+Language_mis;
 Language_mk;Macedonian
 Language_ml;Malayalam
 Language_mn;Mongolian
@@ -957,6 +1003,7 @@ Language_tw;Twi
 Language_ty;Tahitian
 Language_ug;Uighur
 Language_uk;Ukrainian
+Language_und;
 Language_ur;Urdu
 Language_uz;Uzbek
 Language_ve;Venda
@@ -971,20 +1018,23 @@ Language_yue;
 Language_za;Zhuang
 Language_zh;Chinese
 Language_zh-cmn;
-Language_zh-cn;
 Language_zh-CN;
+Language_zh-cn;
 Language_zh-Hans;
 Language_zh-Hant;
-Language_zh-tw;
 Language_zh-TW;
+Language_zh-tw;
 Language_zh-yue;
 Language_zu;Zulu
+Language_zxx;
+LanguageChanges;
 Languages;
 LawRating;Law rating
-LegacyStreamDisplay;
 LCCN;LCCN
+LegacyStreamDisplay;
 LfeAttenuationKnown;
 LfeMixGain;
+lfeon;
 Library;Muxing library
 Lifetime_Subscribe_Button;
 Lightness;
@@ -1029,6 +1079,7 @@ LtRtCenterMixGain;
 LtRtSurroundMixGain;
 Lyricist;Lyricist
 Lyrics;
+MacCreatedBy;
 Mastered_Date;Mastered date
 MasteredBy;Mastered by
 MasteringDisplay_ColorPrimaries;
@@ -1036,6 +1087,7 @@ MasteringDisplay_Luminance;
 Matrix_Channel(s);
 Matrix_ChannelPositions;
 matrix_coefficients;
+matrix_coefficients_Source;
 Matrix_Format;
 MaxCLL;
 MaxFALL;
@@ -1046,8 +1098,9 @@ MD5;
 MD5_Unencoded;
 MediaInfo_About;Supply very detailled information\r\nabout a multimedia file:\r\nMatroska, OGG (including OGM)\r\nMPEG1 (including VCD)\r\nMPEG2 (including DVD and SVCD)\r\nMPEG4 (including Itunes M4A)\r\nQuicktime\r\nRealMedia\r\nWindowsMedia (including WMV, WMA)\r\nMicrosoft RIFF (including AVI, WAV)\r\nSound-only formats (AC3, DTS, AAC, AU, AIFF...)
 MediaInfo_About_About;
-Menu;Menu
+MediaInfo_WebSite;
 Menu stream(s);Menu streams
+Menu;Menu
 Menu_Codec_List;
 Menu_Hint;More possibilities
 Menu_No;No menu
@@ -1056,6 +1109,7 @@ MenuID;
 Metadata_Format;
 Metadata_Format_Type;
 Metadata_MuxingMode;
+Minimize;Minimalizovat
 MixType;
 mn; min
 Mood;Mood
@@ -1096,10 +1150,15 @@ Object;
 ObjectCount;
 OK;OK
 One output file per input file;One output file per input file
+OnlyDiffer;
+OnlyIdentical;
 Open;Otevřít
 OpenCaptionsLanguage;
 OpenCaptionsPresent;
 OpenCaptionsType;
+OpenFile;
+OpenFileError;
+OpenRecent;
 Options;Nastavení
 Options_Hint;Předvolby
 Original;Originál
@@ -1111,17 +1170,21 @@ Originator;
 Other;Různé
 OtherIdentifier;
 OtherIdentifierType;
-Output;Výstup
+OtherViews;
 Output format;Zobrazit jako
+Output;Výstup
 OverallBitRate;Celkový BitRate
 OverallBitRate_Maximum;
 OverallBitRate_Minimum;
 OverallBitRate_Mode;
 OverallBitRate_Nominal;
+OverallBitRate_Precision_Max;
+OverallBitRate_Precision_Min;
 PackageName;
 PackFormat;
 Part;Část
 Part_Count;Total count
+PartialParsing;
 PartNumber;
 PartTotal;
 Performer;Performer
@@ -1148,12 +1211,14 @@ Position_Total;
 Preferences;Předvolby
 PreferredDownmix;
 Premium;
+Premium_Feature;
 Premium_Summary;
 PreselectionLabel;
 Presentation;
 PresentationConfig;
 PresentationConfig_ContentClassifier;
 PresentationID;
+PresentationLevel;
 PreviousDownmixType5ch;
 PreviousMixType2ch;
 PrimaryAudioLanguage;
@@ -1169,6 +1234,7 @@ ProgrammeTextLanguage;
 ProgrammeTitle;
 Publisher;Publisher
 Purchased_Date;purchased date
+PurchaseInformation;
 Quote character;Quote character
 RadioStation;Radio station
 Rating;Hodnocení
@@ -1183,8 +1249,10 @@ Renew;
 ReplayGain_Gain;
 ReplayGain_Peak;
 Report;
+ReportBy;
 Resolution;Rozlišení
 RestoreLifetimeSubscription;
+Retry;
 s; s
 Sampled_Height;
 Sampled_Width;
@@ -1210,6 +1278,7 @@ Season;Season
 SecondaryAudioLanguage;
 see below;see below
 Select your directory;
+SelectAll;Vybrat vše
 Send HeaderFile;
 Separator_Columns;columns separator
 Separator_Lines;lines separator
@@ -1218,21 +1287,25 @@ ServiceChannel;
 ServiceKind;
 ServiceName;
 ServiceProvider;
+Services;Služby
 ServiceType;
 Set;Nastavit
 Set_Count;Set count
 Setup;Hlavní
 Sharpness;
-Sheet;List
 Sheet (Complete);List (Complete)
-Shell extension;Integrovat do kontextového menu Průzkumníka (pravé tlačítko myši)
+Sheet;List
 Shell extension, folder;
 Shell extension, separate instance;
+Shell extension;Integrovat do kontextového menu Průzkumníka (pravé tlačítko myši)
 Shell InfoTip;Integrovat do kontextového menu (při najetí myši na soubor)
 ShimName;
 ShimVersion;
 Show menu;Zobrazit menu
 Show toolbar;Zobrazit nástrojovou lištu
+Show;
+ShowAll;Zobrazit vše
+ShowMore;
 SignalGroup;
 SigningPresent;
 SignLanguage;
@@ -1247,6 +1320,7 @@ Source_StreamSize;
 Source_StreamSize_Encoded;
 SpokenSubtitles;
 Standard;Standard
+Stored_Height;
 StoreMethod_InterleavedFields;
 StoreMethod_SeparatedFields;
 StoreMethod_SeparatedFields_1;
@@ -1261,6 +1335,7 @@ StreamKind;Kind of stream
 StreamKindID;
 StreamKindPos;
 StreamOrder;
+Streams;
 StreamSize;
 StreamSize_Demuxed;
 StreamSize_Encoded;
@@ -1270,6 +1345,7 @@ Subscribe;
 Subscribe_Button;
 Subscribe_Failed;
 Subscribe_Manage;
+Subscribe_Premium;
 Subscribe_Renew;
 Subscribe_Renew_Price;
 Subscribe_Unaviable;
@@ -1287,6 +1363,8 @@ Summary;Summary
 Supported formats;Supported formats
 Supported?;Supported?
 SupportUs;
+SupportUs2;
+surmixlev;
 SurroundAttenuationKnown;
 SwitchGroup;
 Synopsis;Synopsis
@@ -1297,11 +1375,12 @@ TargetDeviceConfig;
 Technician;Technician
 TermsOfUse;Terms of use
 TertiaryAudioLanguage;
-Text;Text
+TestContinuousFileNames;
 Text - Custom;Text - Vlastní
 Text (HTML);Text (HTML)
 Text stream(s);Text streams
 Text streams;Text streams
+Text;Text
 Text_Codec_List;Text codecs
 Text_Format_List;
 Text_Format_WithHint_List;
@@ -1341,11 +1420,12 @@ TrackFormat;
 TrackIndex;
 TrackUID;
 transfer_characteristics;
+transfer_characteristics_Source;
 Translate_Reports;
 Translator;Přeložil
 Transport;
-Tree;Strom
 Tree & Text;Tree & Text
+Tree;Strom
 Trim_Center;
 Trim_Height;
 Trim_Surround;
@@ -1362,6 +1442,26 @@ TrimMode8i;
 TruePeakLevel;
 TruePeakLevel_Album;
 Type;
+Type_Composer;
+Type_Conductor;
+Type_Cover;
+Type_Cover_Back;
+Type_Cover_Media;
+Type_DuringPerformance;
+Type_DuringRecording;
+Type_FileIcon;
+Type_FileIcon_32x32;
+Type_Illustration;
+Type_LeafletPage;
+Type_Lyricist;
+Type_Performer;
+Type_Performer_Lead;
+Type_PerformerLogo;
+Type_Picture;
+Type_PublisherLogo;
+Type_RecordingLocation;
+Type_ScreenCapture;
+Type_Thumbnail;
 TypeDefinition;
 UniqueID;
 UniversalAdID;
@@ -1369,8 +1469,9 @@ UniversalAdID_Registry;
 UniversalAdID_Value;
 Unknown;Neznámý
 Url;Url
-Video;Video
+Value;
 Video stream(s);Video stream(s)
+Video;Video
 Video_Codec_List;Video kodeky
 Video_Delay;Video delay
 Video_Format_List;
@@ -1401,6 +1502,7 @@ WebSite_Video_More;Go to the web site (%Url%) to find this video codec
 Width;Šířka
 Width_CleanAperture;
 Width_Original;
+Window;Okno
 WriteMe;Napiš autorovi
 WriteToTranslator;Napiš překladateli
 Written_Date;Written date
@@ -1409,5 +1511,6 @@ WrittenBy;Napsal
 Yes;Ano
 Your system;Instalované kodeky
 Your translation;
-ZZ_Automatic_Percent;53
-ZZ_AutomaticLanguage_Percent;58
+Zoom;Přepnout velikost
+ZZ_Automatic_Percent;51
+ZZ_AutomaticLanguage_Percent;55

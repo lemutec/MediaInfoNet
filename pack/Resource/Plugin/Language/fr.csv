@@ -14,8 +14,8 @@
  bit1; bit
  bit2; bits
  bit3; bits
- bps; b/s
  Bps; o/s
+ bps; b/s
  Byte1; Octet
  Byte2; Octets
  Byte3; Octets
@@ -49,8 +49,8 @@
  frame3; images
  GB; Go
  Gb; Gb
- Gbps; Gb/s
  GBps; Go/s
+ Gbps; Gb/s
  GHz; GHz
  GiB; Gio
  GibiByte1; GibiOctets
@@ -91,8 +91,8 @@
  KiloByte3; KiloOctets
  MB; Mo
  Mb; Mb
- Mbps; Mb/s
  MBps; Mo/s
+ Mbps; Mb/s
  MebiBit1; MebiBit
  MebiBit2; MebiBits
  MebiBit3; MebiBits
@@ -161,7 +161,9 @@
 7.1ch;
 About;À propos de
 About_Hint;Comment contacter l'auteur ? Comment trouver la dernière version ?
+AC3_Metadata;
 Accompaniment;Accompagnement
+acmod;
 Active_DisplayAspectRatio;Format actif à l'écran
 Active_Height;Hauteur active
 Active_Width;Largeur active
@@ -177,9 +179,9 @@ AdID;Identifiant Ad-ID
 ADM: Show ChannelFormats;ADM : Afficher le contenu ChannelFormats
 ADM: Show TrackUIDs;ADM : Afficher les TrackUID
 AdmProfile;Profil ADM
-Advanced;Avancé
-Advanced mode;Mode avancé
 Advanced mode -->;
+Advanced mode;Mode avancé
+Advanced;Avancé
 Album;Album
 Album_ReplayGain_Gain;Gain en lecture de l'album
 Album_ReplayGain_Peak;Crête de gain en lecture de l'album
@@ -187,18 +189,24 @@ Alignment;Alignement
 Alignment_Aligned;Aligné sur les entrelacements
 Alignment_Split;Eparpillé à travers les entrelacements
 All;Tout
+AllFields;Tous les Champs
 AlternateGroup;Groupe alternatif
+AnalyzeServicesMenu;Analyser avec MediaInfo
+App_About;À propos de MediaInfo
+App_Hide;Masquer MediaInfo
+App_Quit;Quitter MediaInfo
 Archival_Location;Archivé à
 Arranger;Arrangement
 ArtDirector;Directeur artistique
 AspectRatio;Format à l'écran
 AssistantDirector;Assistant-directeur
 AssociatedVideo_FrameRate;Fréquence d'images de la vidéo associée
-at;à
 At least one file;(Vous devez ouvrir au minimum un fichier ou un dossier)
+at;à
 Attachments;
-Audio;Audio
 Audio stream(s);Piste(s) audio
+Audio;Audio
+Audio_Channels_Total;
 Audio_Codec_List;Codecs audio
 Audio_Format_List;
 Audio_Format_WithHint_List;
@@ -238,6 +246,9 @@ BitRate_Mode_CBR;Constant
 BitRate_Mode_VBR;Variable
 BitRate_Nominal;Débit nominal
 Bits-(Pixel*Frame);Bits/(Pixel*Image)
+BitstreamLevel;
+Bring All to Front;Tout ramener au premier plan
+bsid;
 BufferSize;Taille du tampon
 Cancel;Annuler
 CaptionServiceName;Nom du service de sous-titre
@@ -253,8 +264,8 @@ ChannelMode;Mode des canaux
 ChannelPositions;Position des canaux
 ChannelPositions_Original;
 Chapter(s);Chapitre(s)
-Chapters;Chapitres
 Chapters stream(s);Piste(s) de chapitre
+Chapters;Chapitres
 Chapters_Codec_List;Codecs de chapitre
 Chapters_No;Pas de chapitre
 Chapters_Pos_Begin;
@@ -262,9 +273,9 @@ Chapters_Pos_End;
 ChaptersCount;Nombre de pistes de chapitre
 CharacterSet;Jeu de caractères codés
 CheckNewVersion;Vérifier si une nouvelle version existe.
-Choose custom;Choix personnalisés
 Choose custom sheet;Choisir le tableau à personnaliser
 Choose custom text;Choisir le texte à personnaliser
+Choose custom;Choix personnalisés
 Choose export format;Choisir le format d'exportation
 Choose file(s);Choisir le(s) fichier(s) à ouvrir
 Choose filename;Choisir le nom du fichier
@@ -274,11 +285,15 @@ Chroma;Chrominance
 ChromaSubsampling;Sous-échantillonnage de la chrominance
 Classifier;Classificateur de contenu
 ClearList;Vider la liste
-Close;Fermer
 Close all before open;Tout fermer avant d'ouvrir
+Close;Fermer
+CloseAll;Fermer tous les fichiers
 ClosedCaptionsLanguage;Langue des textes pour malentendants
 ClosedCaptionsPresent;Présence de textes pour malentendants
 ClosedCaptionsType;Type de textes pour malentendants
+CloseFile;Fermer le fichier
+CloseWindow;Fermer la fenêtre
+cmixlev;
 Codec;Codec
 Codec_Description;Description du codec
 Codec_Info;Infos sur le Codec
@@ -308,10 +323,16 @@ ColorTheme;Thème
 ColorTheme_Dark;Thème sombre
 ColorTheme_Light;Thème clair
 ColorTheme_System;Utiliser la configuration du système
+colour_description_present;
+colour_description_present_Source;
 colour_primaries;Coordonnées de chromaticité
+colour_primaries_Source;
 colour_range;Gamme de couleurs
+colour_range_Source;
 Comment;Commentaire
 CommissionedBy;Commanditaire
+Compare;Comparer
+CompareView;Comparer (Fonctionnalité premium)
 Compilation;Compilation
 ComplementaryObject;Objet complémentaire
 CompleteName;Nom complet
@@ -322,6 +343,7 @@ Compression_Mode;Mode de compression
 Compression_Mode_Lossless;Sans perte
 Compression_Mode_Lossy;Avec perte
 Compression_Ratio;Taux de compression
+comprprof;
 Conductor;Chef d'orchestre
 ConformanceCheck;Contrôle de conformité
 ConformanceErrors;Erreurs de conformité
@@ -333,6 +355,7 @@ Container and general information;Conteneur et informations générales
 Content;Contenu
 ContentType;Type de contenu
 CoProducer;Coproducteur
+Copy;Copier
 Copyright;Copyright
 CopyrightYear;Année du Copyright
 CostumeDesigner;Responsable des costumes
@@ -344,6 +367,7 @@ Cover_Description;Description de la pochette
 Cover_Mime;MIME MailExtension de la pochette
 Cover_Type;Type de la pochette
 CoverData;
+CreatedOn;
 Cropped;Dimensions du retaillage
 Custom;Sortie personnalisée
 CustomDownmixTargets;Cibles de mixage réducteur personnalisé
@@ -352,10 +376,11 @@ DarkMode;Mode sombre
 Date;Date
 Debug;Debogage
 Decimal point;Point décimal
-Default;Par défaut
 Default translation;
+Default;Par défaut
 Default_Setting;Paramètre par défaut
 DefaultTargetDeviceConfig;Configuration par défaut du périphérique cible
+DefaultView;Vue par défaut :
 Delay;Délai
 Delay_Source;Délai, origine
 Delay_Source_Container;Conteneur
@@ -364,6 +389,10 @@ Delete;Supprimer
 Description;Description
 Details;
 dialnorm;Normalisation des dialogues
+dialnorm_Average;
+dialnorm_Count;
+dialnorm_Maximum;
+dialnorm_Minimum;
 DialogueCorrected;Dialogues corrigés
 DialogueEnhancement;Amélioration des dialogues
 DialogueNormalization;Normalisation des dialogues
@@ -386,6 +415,8 @@ Dolby_Atmos_Metadata;Métadonnées Dolby Atmos
 DolbyAtmos;Dolby Atmos
 Donate;Faire un don
 DotsPerInch;Point par pouce
+DownloadFile;Téléchargement du fichier %INDEX% de %COUNT% ...
+DownloadFileError;Impossible de télécharger %FILE%
 Downmix;Mixage réducteur
 Downmix_5.1.x;Mixage réducteur 5.1 et 5.1.x
 Downmix_5to2;Mixage réducteur 5.1 à 2.0 (stéréo)
@@ -400,6 +431,7 @@ Duration_Start_Command;Heure de début (commandes)
 Duration_Start2End;Durée du contenu visible
 DynamicObject;Objet dynamique
 DynamicRangeControl;Contrôle dynamique de la plage
+dynrngprof;
 Eac3DrcProfile;Profil E-AC-3 DRC
 Edit;Modifier
 EditedBy;Monté par
@@ -409,7 +441,10 @@ ElementCount;Nombre d'éléments
 EMail;e-mail
 Enable FFmpeg plugin;Activer le plug-in FFmpeg
 Encoded_Application;Application utilisée
+Encoded_Application_Name;
+Encoded_Application_Version;
 Encoded_Date;Date d'encodage
+Encoded_Hardware;
 Encoded_Library;Bibliothèque utilisée
 Encoded_Library_Name;
 Encoded_Library_Settings;Paramètres d'encodage
@@ -418,8 +453,11 @@ Encoded_Original;Support original
 EncodedBy;Encodé par
 EPG_Positions;Positions de l'EPG (interne)
 EpisodeTitleNumber;Numéro de titre d'épisode
+Error;Erreur
 Error_File;Erreur lors de la lecture du fichier
 Error_File_Write;Erreur lors de l'écriture du fichier
+Error_Open;Impossible d'ouvrir le(s) fichier(s)
+Error_Save;Impossible d'enregistrer le fichier
 Events_MinDuration;Durée minimale d'un événement
 Events_PaintOn;Événements PaintOn
 Events_PopOn;Événements PopOn
@@ -434,8 +472,13 @@ Extensions;Extensions utilisées
 External_Media_NotMounted;Le stockage externe n'est pas accessible
 Family;Famille
 Fax;Fax
-File;Fichier
+Feature_AdvancedMode;Mode avancé
+Feature_FilesCompare;Comparaison de fichiers
+Feature_More;Et d'autres fonctionnalités à venir
+Feature_SelectView;Sélection de la vue par défaut
+Field;Champ
 File size;Taille du fichier
+File;Fichier
 File_Append;Ajouter à un fichier déjà existant (Faites attention à ce que les paramètres soient identiques)
 File_Created_Date;Date de création du fichier
 File_Created_Date_Local;Date de création du fichier (local)
@@ -453,10 +496,10 @@ FirstDisplay_Type;Type du premier événement
 FirstFrameOfAction;Première trame d'action
 FlatPanelTv;Téléviseur écran plat
 FlowID;Identifiant de flux
-Folder;Dossier
 Folder (R);Dossier (R)
 Folder (R)_Hint;Sélectionner un dossier à étudier (avec tous ses sous-dossiers)
 Folder (Recursively);Dossier (Récursivement)
+Folder;Dossier
 Folder_Hint;Sélectionner un dossier à étudier
 FolderName;Nom du dossier
 Forced;Mode forcé
@@ -517,6 +560,7 @@ FrameRate_Num;
 FrameRate_Original;Débit im/s d'origine
 FrameRate_Real;Débit im/s réel
 FullParsing;Analyse complète
+FullParsingTips;Sortie plus complète (plus lent)
 Gallery;Gallerie
 General;Général
 GeneralCompliance;Conformité générale
@@ -729,6 +773,7 @@ Height;Hauteur
 Height_CleanAperture;Hauteur ouverture propre
 Height_Original;Hauteur originale
 Help;Aide
+HideOthers;Masquer les autres
 Hint;Indice
 HomeTheaterAvr;Home cinéma AVR
 How many audio streams?;Nombre de flux audio :
@@ -739,8 +784,8 @@ HTML;HTML
 ID;ID
 IdentClockStart;Début de l'horloge d'identification
 IFrameInterval;Intervalle I-Frame
-Image;Image
 Image stream(s);Piste(s) image
+Image;Image
 Image_Codec_List;Liste codecs image
 ImageCount;Nombre de pistes image
 ImmersiveStereo;Stéréo immersive
@@ -772,219 +817,224 @@ Known parameters;Paramètres connus
 Label;Étiquette
 Language;Langue
 Language_aa;Afar
-Language_ab;Abkhazian
-Language_ae;Avestan
+Language_ab;Abkhaze
+Language_ae;Avestique
 Language_af;Afrikaans
 Language_ak;Akan
-Language_am;Amharic
-Language_an;Aragonese
-Language_ar;Arabic
-Language_as;Assamese
-Language_av;Avaric
+Language_am;Amharique
+Language_an;Aragonais
+Language_ar;Arabe
+Language_as;Assamais
+Language_av;Avar
 Language_ay;Aymara
-Language_az;Azerbaijani
-Language_ba;Bashkir
-Language_be;Belarusian
-Language_bg;Bulgarian
+Language_az;Azéri
+Language_ba;Bachkir
+Language_be;Biélorusse
+Language_bg;Bulgare
 Language_bh;Bihari
-Language_bi;Bislama
+Language_bi;Bichlamar
 Language_bm;Bambara
 Language_bn;Bengali
-Language_bo;Tibetan
+Language_bo;Tibétain
 Language_br;Breton
-Language_bs;Bosnian
+Language_bs;Bosniaque
 Language_ca;Catalan
-Language_ce;Chechen
+Language_ce;Tchétchène
 Language_ch;Chamorro
 Language_cmn;Mandarin
-Language_co;Corsican
+Language_co;Corse
 Language_cr;Cree
-Language_cs;Czech
+Language_cs;Tchèque
 Language_cu;Slave
-Language_cv;Chuvash
-Language_cy;Welsh
-Language_da;Danish
-Language_de;German
-Language_dv;Divehi
+Language_cv;Tchouvache
+Language_cy;Gallois
+Language_da;Danois
+Language_de;Allemand
+Language_dv;Maldivien
 Language_dz;Dzongkha
-Language_ee;Ewe
-Language_el;Greek
-Language_en;English
-Language_en-gb;English (Great Britain)
-Language_en-us;English (United States)
-Language_eo;Esperanto
-Language_es;Spanish
-Language_es-419;Spanish (Latin America)
-Language_et;Estonian
+Language_ee;Éwé
+Language_el;Grec
+Language_en;Anglais
+Language_en-gb;Anglais (Royaume-Uni)
+Language_en-us;Anglais (États-Unis)
+Language_eo;Espéranto
+Language_es;Espagnol
+Language_es-419;
+Language_et;Estonien
 Language_eu;Basque
-Language_fa;Persian
-Language_ff;Fulah
-Language_fi;Finnish
+Language_fa;Persan
+Language_ff;Peul
+Language_fi;Finnois
 Language_fil;Filipino
-Language_fj;Fijian
-Language_fo;Faroese
-Language_fr;French
-Language_fy;Frisian
-Language_ga;Irish
-Language_gd;Gaelic
-Language_gl;Galician
+Language_fj;Fidjien
+Language_fo;Féroïen
+Language_fr;Français
+Language_fy;Frison
+Language_ga;Irlandais
+Language_gd;Gaélique
+Language_gl;Galicien
 Language_gn;Guarani
-Language_gu;Gujarati
+Language_gu;Goudjrati
 Language_gv;Manx
-Language_ha;Hausa
-Language_he;Hebrew
+Language_ha;Haoussa
+Language_he;Hébreu
 Language_hi;Hindi
-Language_ho;Hiri Motu
-Language_hr;Croatian
-Language_ht;Haitian
-Language_hu;Hungarian
-Language_hy;Armenian
-Language_hy-az;Armenian (Azerbaijani)
+Language_ho;Hiri motu
+Language_hr;Croate
+Language_ht;Haïtien
+Language_hu;Hongrois
+Language_hy;Arménien
+Language_hy-az;
 Language_hz;Herero
-Language_ia;Auxiliary Language Association
-Language_id;Indonesian
+Language_ia;Interlingua (Langue Auxiliaire Internationale)
+Language_id;Indonésien
 Language_ie;Interlingue
 Language_ig;Igbo
-Language_ii;Sichuan Yi
+Language_ii;Yi de Sichuan
 Language_ik;Inupiaq
-Language_Info;Language info
+Language_Info;Langage, plus d'info
 Language_io;Ido
-Language_is;Icelandic
-Language_it;Italian
+Language_is;Islandais
+Language_it;Italien
 Language_iu;Inuktitut
-Language_ja;Japanese
-Language_jv;Javanese
-Language_ka;Georgian
+Language_ja;Japonais
+Language_jv;Javanais
+Language_ka;Géorgien
 Language_kg;Kongo
 Language_ki;Kikuyu
 Language_kj;Kuanyama
 Language_kk;Kazakh
-Language_kl;Kalaallisut
+Language_kl;Groenlandais
 Language_km;Khmer
 Language_kn;Kannada
-Language_ko;Korean
-Language_kr;Kanuri
+Language_ko;Coréen
+Language_kr;Kanouri
 Language_ks;Kashmiri
-Language_ku;Kurdish
+Language_ku;Kurde
 Language_kv;Komi
-Language_kw;Cornish
-Language_ky;Kirghiz
+Language_kw;Cornique
+Language_ky;Kirghize
 Language_la;Latin
-Language_lb;Luxembourgish
+Language_lb;Luxembourgeois
 Language_lg;Ganda
-Language_li;Limburgish
+Language_li;Limbourgeois
 Language_ln;Lingala
 Language_lo;Lao
-Language_lt;Lithuanian
-Language_lu;Luba-Katanga
-Language_lv;Latvian
-Language_mg;Malagasy
-Language_mh;Marshallese
+Language_lt;Lituanien
+Language_lu;Luba-katanga
+Language_lv;Letton
+Language_mg;Malgache
+Language_mh;Marshall
 Language_mi;Maori
-Language_mk;Macedonian
+Language_mis;Langues non codées
+Language_mk;Macédonien
 Language_ml;Malayalam
-Language_mn;Mongolian
-Language_mn-cn;Mongolian (China)
-Language_mo;Moldavian
-Language_More;Language, more info
-Language_mr;Marathi
-Language_ms;Malay
-Language_ms-bn;Malay (Brunei)
-Language_mt;Maltese
-Language_mul;Multiple languages
-Language_my;Burmese
-Language_na;Nauru
-Language_nb;Norwegian Bokmal
-Language_nd;Ndebele
-Language_ne;Nepali
+Language_mn;Mongol
+Language_mn-cn;
+Language_mo;Moldave
+Language_More;Langue, plus d'info
+Language_mr;Marathe
+Language_ms;Malais
+Language_ms-bn;Malais (Brunéi)
+Language_mt;Maltais
+Language_mul;Langues multiples
+Language_my;Birman
+Language_na;Nauruan
+Language_nb;Norwegian bokmål
+Language_nd;Ndébélé du Nord
+Language_ne;Népalais
 Language_ng;Ndonga
-Language_nl;Dutch
-Language_nl-be;Flemish
-Language_nn;Norwegian Nynorsk
-Language_no;Norwegian
-Language_nr;Ndebele
+Language_nl;Néerlandais
+Language_nl-be;
+Language_nn;Norvégien Bokmål
+Language_no;Norvégien
+Language_nr;Ndébélé du Sud
 Language_nv;Navaho
 Language_ny;Nyanja
 Language_oc;Occitan
 Language_oj;Ojibwa
-Language_om;Oromo
+Language_om;Galla
 Language_or;Oriya
-Language_os;Ossetic
-Language_pa;Panjabi
+Language_os;Ossète
+Language_pa;Panjâbî
 Language_pi;Pali
-Language_pl;Polish
-Language_ps;Pushto
-Language_pt;Portuguese
-Language_pt-br;Portuguese (Brazil)
+Language_pl;Polonais
+Language_ps;Pachto
+Language_pt;Portugais
+Language_pt-br;Portugais (Brésil)
 Language_qu;Quechua
-Language_rm;Raeto-Romance
+Language_rm;Rhéto-roman
 Language_rn;Rundi
-Language_ro;Romanian
-Language_ru;Russian
-Language_rw;Kinyarwanda
+Language_ro;Roumain
+Language_ru;Russe
+Language_rw;Rwanda
 Language_sa;Sanskrit
-Language_sc;Sardinian
+Language_sc;Sarde
 Language_sd;Sindhi
-Language_se;Northern Sami
+Language_se;Sami du Nord
 Language_sg;Sango
-Language_si;Sinhala
-Language_sk;Slovak
-Language_sl;Slovenian
+Language_si;Singhalais
+Language_sk;Slovaque
+Language_sl;Slovène
 Language_sm;Samoan
-Language_smi;Sami
+Language_smi;Sames
 Language_sn;Shona
 Language_so;Somali
-Language_sq;Albanian
-Language_sr;Serbian
+Language_sq;Albanais
+Language_sr;Serbe
 Language_ss;Swati
-Language_st;Sotho
-Language_su;Sundanese
-Language_sv;Swedish
+Language_st;Sotho du Sud
+Language_su;Soundanais
+Language_sv;Suédois
 Language_sw;Swahili
-Language_ta;Tamil
-Language_te;Telugu
-Language_tg;Tajik
-Language_th;Thai
-Language_ti;Tigrinya
-Language_tk;Turkmen
+Language_ta;Tamoul
+Language_te;Télougou
+Language_tg;Tadjik
+Language_th;Thaï
+Language_ti;Tigrigna
+Language_tk;Turkmène
 Language_tl;Tagalog
 Language_tn;Tswana
-Language_to;Tonga
-Language_tr;Turkish
+Language_to;Tongan
+Language_tr;Turc
 Language_ts;Tsonga
 Language_tt;Tatar
 Language_tw;Twi
-Language_ty;Tahitian
-Language_ug;Uighur
-Language_uk;Ukrainian
-Language_ur;Urdu
-Language_uz;Uzbek
+Language_ty;Tahitien
+Language_ug;Ouïgour
+Language_uk;Ukrainien
+Language_und;Indéterminée
+Language_ur;Ourdou
+Language_uz;Ouszbek
 Language_ve;Venda
-Language_vi;Vietnamese
-Language_vo;Volapuk
-Language_wa;Walloon
+Language_vi;Vietnamien
+Language_vo;Volapük
+Language_wa;Wallon
 Language_wo;Wolof
 Language_xh;Xhosa
 Language_yi;Yiddish
 Language_yo;Yoruba
-Language_yue;Cantonese
+Language_yue;Cantonais
 Language_za;Zhuang
-Language_zh;Chinese
+Language_zh;Chinois
 Language_zh-cmn;Mandarin
-Language_zh-cn;Chinese (China)
-Language_zh-CN;Chinese (China)
-Language_zh-Hans;Chinese (Simplified)
-Language_zh-Hant;Chinese (Traditional)
-Language_zh-tw;Chinese (Taiwan)
-Language_zh-TW;Chinese (Taiwan)
-Language_zh-yue;Cantonese
-Language_zu;Zulu
+Language_zh-CN;Chinois (Chine)
+Language_zh-cn;Chinois (Chine)
+Language_zh-Hans;Chinois (simplifié)
+Language_zh-Hant;Chinois (traditionnel)
+Language_zh-TW;Chinois (Taiwan)
+Language_zh-tw;Chinois (Taiwan)
+Language_zh-yue;Cantonais
+Language_zu;Zoulou
+Language_zxx;Pas de contenu linguistique ou non applicable
+LanguageChanges;Les changements prendront effet au redémarrage de l'application
 Languages;
 LawRating;Classé
-LegacyStreamDisplay;
 LCCN;LCCN
+LegacyStreamDisplay;
 LfeAttenuationKnown;Atténuation basse fréquence connue
 LfeMixGain;Gain de mixage basse fréquence
+lfeon;
 Library;Bibliothèques utilisées
 Lifetime_Subscribe_Button;S'abonner à vie pour %PRICE%
 Lightness;Luminosité
@@ -1029,6 +1079,7 @@ LtRtCenterMixGain;Gain de mixage central LtRt
 LtRtSurroundMixGain;Gain de mixage surround LtRt
 Lyricist;Parolier
 Lyrics;Paroles
+MacCreatedBy;GUI crée par Max Pozdeev
 Mastered_Date;Date de création
 MasteredBy;Créé par
 MasteringDisplay_ColorPrimaries;Coordonnées de chromaticité de l'écran de référence
@@ -1036,6 +1087,7 @@ MasteringDisplay_Luminance;Luminance de l'écran de référence
 Matrix_Channel(s);Encodage matriciel, canaux
 Matrix_ChannelPositions;Encodage matriciel, positions des canaux
 matrix_coefficients;Coefficients de la matrice
+matrix_coefficients_Source;
 Matrix_Format;Format de l'encodage matriciel
 MaxCLL;Niveau de luminosité maximal du contenu
 MaxFALL;Niveau de luminosité moyen du contenu
@@ -1046,8 +1098,9 @@ MD5;MD5
 MD5_Unencoded;MD5 du contenu non codé
 MediaInfo_About;MediaInfo fournit des informations techniques ainsi que les tags concernant vos fichiers Audio et Vidéo.\r\nExcepté l'interface graphique de l'App Store Mac, c'est un logiciel libre, ce qui signifie qu'il est gratuit pour l'utilisateur final et que les développeurs ont la liberté de l'étudier, de l'améliorer et de le redistribuer (licence BSD)
 MediaInfo_About_About;MediaInfo v%MI_VERSION% basé sur MediaInfoLib v%MIL_VERSION%
-Menu;Menu
+MediaInfo_WebSite;Site web de MediaInfo
 Menu stream(s);Menu piste(s)
+Menu;Menu
 Menu_Codec_List;Menu codecs
 Menu_Hint;Plus de possibilités
 Menu_No;Pas de menu
@@ -1056,6 +1109,7 @@ MenuID;Identifiant de menu
 Metadata_Format;Métadonnées, Format
 Metadata_Format_Type;Métadonnées, Type
 Metadata_MuxingMode;Métadonnées, Mode de multiplexage
+Minimize;Minimiser
 MixType;Type de mixage
 mn; min
 Mood;Humeur
@@ -1096,10 +1150,15 @@ Object;Objet
 ObjectCount;Nombre d'objets
 OK;OK
 One output file per input file;Erreur de lecture du fichier
+OnlyDiffer;Seulement les champs avec des différences
+OnlyIdentical;Seulement les champs identiques
 Open;Ouvrir
 OpenCaptionsLanguage;Langue de sous-titres ouverts
 OpenCaptionsPresent;Présence de sous-titres ouverts
 OpenCaptionsType;Type de sous-titres ouverts
+OpenFile;Ouverture du fichier %INDEX% de %COUNT% ...
+OpenFileError;Impossible d'ouvrir %FILE%
+OpenRecent;Récemment ouvert
 Options;Options
 Options_Hint;Préférences
 Original;Original
@@ -1111,17 +1170,21 @@ Originator;Initiateur
 Other;Autre
 OtherIdentifier;Autre identifiant
 OtherIdentifierType;Autre type d'identifiant
-Output;Sortie
+OtherViews;Autres vues
 Output format;Format de sortie
+Output;Sortie
 OverallBitRate;Débit global
 OverallBitRate_Maximum;Débit global maximum
 OverallBitRate_Minimum;Débit global minimum
 OverallBitRate_Mode;Type de débit global
 OverallBitRate_Nominal;Débit global nominal
+OverallBitRate_Precision_Max;
+OverallBitRate_Precision_Min;
 PackageName;Nom du paquet
 PackFormat;Format de paquet
 Part;Partie
 Part_Count;Nombre de parties
+PartialParsing;
 PartNumber;Numéro de la partie
 PartTotal;Nombre total de parties
 Performer;Interprète
@@ -1148,12 +1211,14 @@ Position_Total;Total
 Preferences;Préférences
 PreferredDownmix;Mixage réducteur préféré
 Premium;Premium
+Premium_Feature;Fonctionalité premium
 Premium_Summary;Fonctionnalités pour les abonnés premium
 PreselectionLabel;Étiquiquette de présélection
 Presentation;Présentation
 PresentationConfig;Config de présentation
 PresentationConfig_ContentClassifier;Config de présentation des classificateurs de contenu
 PresentationID;ID de présentation
+PresentationLevel;
 PreviousDownmixType5ch;Type de mixage réducteur précédent 5 canaux
 PreviousMixType2ch;Type de mix précédent 2 canaux
 PrimaryAudioLanguage;Langue audio principale
@@ -1169,6 +1234,7 @@ ProgrammeTextLanguage;Langue du sous-titrage du programme
 ProgrammeTitle;
 Publisher;Publicateur
 Purchased_Date;Date d'achat
+PurchaseInformation;Informations à propos des achats in-app
 Quote character;Caractère de citation :
 RadioStation;Station de radio
 Rating;Note
@@ -1183,8 +1249,10 @@ Renew;Renouveler
 ReplayGain_Gain;Gain en lecture
 ReplayGain_Peak;Crête de gain en lecture
 Report;Rapport
+ReportBy;
 Resolution;Résolution
 RestoreLifetimeSubscription;Restaurer l'abonnement à vie
+Retry;Réessayer
 s; s
 Sampled_Height;
 Sampled_Width;
@@ -1210,6 +1278,7 @@ Season;Saison
 SecondaryAudioLanguage;Langue audio secondaire
 see below;Voir ci-dessous
 Select your directory;
+SelectAll;Tout sélectionner
 Send HeaderFile;Merci de m'envoyer le fichier Header ici : http://sourceforge.net/projects/mediainfo/ (partie Bugs)
 Separator_Columns;Séparateur de colonnes :
 Separator_Lines;Séparateur de lignes :
@@ -1218,21 +1287,25 @@ ServiceChannel;Canal du service
 ServiceKind;Genre de service
 ServiceName;Nom du service
 ServiceProvider;Fournisseur du service
+Services;Services
 ServiceType;Type de service
 Set;Ensemble
 Set_Count;Nombre de réglages
 Setup;Configuration
 Sharpness;Netteté
-Sheet;Tableau
 Sheet (Complete);Tableau (Complet)
-Shell extension;Extension du Shell (le clic droit sur un fichier multimédia propose un choix 'Media Info')
+Sheet;Tableau
 Shell extension, folder;Extension du Shell pour les répertoires
 Shell extension, separate instance;
+Shell extension;Extension du Shell (le clic droit sur un fichier multimédia propose un choix 'Media Info')
 Shell InfoTip;Bulle d'aide 'Explorateur' (survoller un fichier multimedia à la souris affichera toutes ses infos)
 ShimName;Nom de Shim
 ShimVersion;Version de Shim
 Show menu;Afficher la barre des menus
 Show toolbar;Afficher la barre d'outils
+Show;Montrer:
+ShowAll;Tout montrer
+ShowMore;Afficher plus de données dans la sortie, y compris différents formats de temps ou de durée
 SignalGroup;Groupe de signal
 SigningPresent;Signature présente
 SignLanguage;Langue des signes
@@ -1247,6 +1320,7 @@ Source_StreamSize;Taille du flux source
 Source_StreamSize_Encoded;Taille du flux encodé source
 SpokenSubtitles;Sous-titres parlé
 Standard;Norme
+Stored_Height;
 StoreMethod_InterleavedFields;Trames entrelacées
 StoreMethod_SeparatedFields;Trames séparées
 StoreMethod_SeparatedFields_1;Trames séparées (1 trame par bloc)
@@ -1261,6 +1335,7 @@ StreamKind;Type de flux
 StreamKindID;Identifiant du flux
 StreamKindPos;Identifiant du flux
 StreamOrder;
+Streams;Flux
 StreamSize;Taille du flux
 StreamSize_Demuxed;Taille du flux démultiplexé
 StreamSize_Encoded;Taille du flux encodé
@@ -1270,6 +1345,7 @@ Subscribe;S'abonner
 Subscribe_Button;S'abonner (%PRICE% pour un an)
 Subscribe_Failed;Achat annulé ou échoué
 Subscribe_Manage;Gérer l'abonnement
+Subscribe_Premium;S'abonner aux fonctionnalités premium
 Subscribe_Renew;Renouveler l'abonnement ?
 Subscribe_Renew_Price;Renouveler l'abonnement (%PRICE% pour un an)
 Subscribe_Unaviable;Impossible de récupérer les détails de l'abonnement.
@@ -1287,6 +1363,8 @@ Summary;Résumé
 Supported formats;Formats supportés
 Supported?;Supporté ?
 SupportUs;Nous Soutenir, Et obtenir le thème sombre ainsi que d'autres fonctionnalités à venir.
+SupportUs2;Soutenez-nous et Obtenez des fonctionnalités exclusives.
+surmixlev;
 SurroundAttenuationKnown;Atténuation surround connue
 SwitchGroup;Changer de groupe
 Synopsis;Synopsis
@@ -1297,11 +1375,12 @@ TargetDeviceConfig;Configuration de l'appareil cible
 Technician;Technicien
 TermsOfUse;Conditions d'utilisation
 TertiaryAudioLanguage;Langue audio tertiaire
-Text;Texte
+TestContinuousFileNames;
 Text - Custom;Personnaliser les textes
 Text (HTML);Texte (HTML)
 Text stream(s);Flux texte
 Text streams;Flux texte
+Text;Texte
 Text_Codec_List;Codecs texte
 Text_Format_List;
 Text_Format_WithHint_List;
@@ -1341,11 +1420,12 @@ TrackFormat;Format de piste
 TrackIndex;Indexe de piste
 TrackUID;UID de piste
 transfer_characteristics;Caractéristiques du transfert
+transfer_characteristics_Source;
 Translate_Reports;Traduire les rapports
 Translator;Traducteur
 Transport;Transport
-Tree;Arbre
 Tree & Text;Arbre & Texte
+Tree;Arbre
 Trim_Center;Coupe centrale
 Trim_Height;Coupe haute
 Trim_Surround;Coupe surround
@@ -1362,6 +1442,26 @@ TrimMode8i;Mode de coupe 7.1.4ch
 TruePeakLevel;Niveau de crête réel
 TruePeakLevel_Album;Niveau de crête réel (album)
 Type;Type
+Type_Composer;
+Type_Conductor;
+Type_Cover;
+Type_Cover_Back;
+Type_Cover_Media;
+Type_DuringPerformance;
+Type_DuringRecording;
+Type_FileIcon;
+Type_FileIcon_32x32;
+Type_Illustration;
+Type_LeafletPage;
+Type_Lyricist;
+Type_Performer;
+Type_Performer_Lead;
+Type_PerformerLogo;
+Type_Picture;
+Type_PublisherLogo;
+Type_RecordingLocation;
+Type_ScreenCapture;
+Type_Thumbnail;
 TypeDefinition;Définition du type
 UniqueID;Identifiant unique
 UniversalAdID;Ad ID universelle
@@ -1369,8 +1469,9 @@ UniversalAdID_Registry;Registre d'Ad ID universelle
 UniversalAdID_Value;Valeur d'Ad ID universelle
 Unknown;Inconnu
 Url;Page Internet
-Video;Vidéo
+Value;Valeur
 Video stream(s);Piste(s) vidéo
+Video;Vidéo
 Video_Codec_List;Codecs vidéo
 Video_Delay;Délai vidéo relatif
 Video_Format_List;
@@ -1401,6 +1502,7 @@ WebSite_Video_More;Visiter la page Internet (%Url%) du codec vidéo
 Width;Largeur
 Width_CleanAperture;Largeur ouverture propre
 Width_Original;Largeur originale
+Window;Fenêtre
 WriteMe;Écrire à l'auteur
 WriteToTranslator;Écrire au traducteur
 Written_Date;Date d'écriture
@@ -1409,5 +1511,6 @@ WrittenBy;Écrit par
 Yes;Oui
 Your system;Votre système
 Your translation;
-ZZ_Automatic_Percent;96
-ZZ_AutomaticLanguage_Percent;96
+Zoom;Zoom
+ZZ_Automatic_Percent;93
+ZZ_AutomaticLanguage_Percent;93

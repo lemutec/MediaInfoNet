@@ -1,0 +1,27 @@
+﻿Set-Location $PSScriptRoot
+
+Write-Host @"
+███╗   ██╗██╗   ██╗ ██████╗ ███████╗████████╗
+████╗  ██║██║   ██║██╔════╝ ██╔════╝╚══██╔══╝
+██╔██╗ ██║██║   ██║██║  ███╗█████╗     ██║   
+██║╚██╗██║██║   ██║██║   ██║██╔══╝     ██║   
+██║ ╚████║╚██████╔╝╚██████╔╝███████╗   ██║   
+╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚══════╝   ╚═╝   
+"@
+
+$ErrorActionPreference = 'Stop'
+
+$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$packDir = Join-Path $scriptDir 'pack'
+
+Push-Location $packDir
+try {
+    dotnet restore
+    dotnet pack MediaInfoDLL.csproj -c Release -o ../
+}
+finally {
+    Pop-Location
+}
+
+Write-Host "`nPress any key to exit..."
+[void][System.Console]::ReadKey($true)

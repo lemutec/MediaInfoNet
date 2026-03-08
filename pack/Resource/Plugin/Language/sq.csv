@@ -14,8 +14,8 @@
  bit1; bit
  bit2; bit
  bit3; bit
- bps; b/s
  Bps; B/s
+ bps; b/s
  Byte1; Bajt
  Byte2; Bajt
  Byte3; Bajt
@@ -49,8 +49,8 @@
  frame3; kuadro
  GB; GB
  Gb; Gb
- Gbps; Gb/s
  GBps; GB/s
+ Gbps; Gb/s
  GHz; GHz
  GiB; GiB
  GibiByte1; GibiBajt
@@ -91,8 +91,8 @@
  KiloByte3; KiloBajt
  MB; MB
  Mb; Mb
- Mbps; Mb/s
  MBps; MebiBajt
+ Mbps; Mb/s
  MebiBit1; MebiBit
  MebiBit2; MebiBit
  MebiBit3; MebiBit
@@ -161,7 +161,9 @@
 7.1ch;
 About;Për
 About_Hint;Si të kontaktohem dhe të gjendet versioni i fundit
+AC3_Metadata;
 Accompaniment;Shoqëruesi
+acmod;
 Active_DisplayAspectRatio;
 Active_Height;
 Active_Width;
@@ -177,9 +179,9 @@ AdID;
 ADM: Show ChannelFormats;
 ADM: Show TrackUIDs;
 AdmProfile;
-Advanced;Avancuar
-Advanced mode;Mënyrë e avancuar
 Advanced mode -->;
+Advanced mode;Mënyrë e avancuar
+Advanced;Avancuar
 Album;Albumi
 Album_ReplayGain_Gain;Replay gain i albumit
 Album_ReplayGain_Peak;Piku i replay gain i albumit
@@ -187,18 +189,24 @@ Alignment;Radhitja
 Alignment_Aligned;Radhitur te gërshetimet
 Alignment_Split;Ndarë te gërshetimet
 All;Gjithçka
+AllFields;
 AlternateGroup;
+AnalyzeServicesMenu;
+App_About;
+App_Hide;
+App_Quit;
 Archival_Location;Vendi i arkivimit
 Arranger;Radhitësi
 ArtDirector;RegjisorArtistik
 AspectRatio;Raporti i aspektit
 AssistantDirector;RegjisorAsistent
 AssociatedVideo_FrameRate;
-at;në
 At least one file;(Duhet hapur të paktën një skedë)
+at;në
 Attachments;
-Audio;Audio
 Audio stream(s);Rrymat e audios
+Audio;Audio
+Audio_Channels_Total;
 Audio_Codec_List;Kodekët e audios
 Audio_Format_List;
 Audio_Format_WithHint_List;
@@ -238,6 +246,9 @@ BitRate_Mode_CBR;Konstant
 BitRate_Mode_VBR;Variabël
 BitRate_Nominal;Raporti nominal i bitit
 Bits-(Pixel*Frame);Bit/(Piksel*Kuadër)
+BitstreamLevel;
+Bring All to Front;
+bsid;
 BufferSize;
 Cancel;Anulo
 CaptionServiceName;
@@ -253,8 +264,8 @@ ChannelMode;
 ChannelPositions;Pozicionet e kanalit
 ChannelPositions_Original;
 Chapter(s);Kapitull
-Chapters;Kapituj
 Chapters stream(s);Rryma(t) e kapitujve
+Chapters;Kapituj
 Chapters_Codec_List;Kodekët e Kapitujve
 Chapters_No;Pa kapituj
 Chapters_Pos_Begin;
@@ -262,9 +273,9 @@ Chapters_Pos_End;
 ChaptersCount;Numri i rrymave të kapitujve
 CharacterSet;
 CheckNewVersion;Verifiko versionin e ri
-Choose custom;Zgjedh me porosi
 Choose custom sheet;Zgjedh me porosi fletën e dëshiruar
 Choose custom text;Zgjedh me porosi tekstin e dëshiruar
+Choose custom;Zgjedh me porosi
 Choose export format;Zgjedh formatin e eksportimit të dëshiruar
 Choose file(s);Zgjedh skedat që të hapen
 Choose filename;Zgjedh emrin e skedës së dëshiruar
@@ -274,11 +285,15 @@ Chroma;Kroma
 ChromaSubsampling;
 Classifier;
 ClearList;
-Close;Mbyll
 Close all before open;Mbyll infot para hapjes
+Close;Mbyll
+CloseAll;
 ClosedCaptionsLanguage;
 ClosedCaptionsPresent;
 ClosedCaptionsType;
+CloseFile;
+CloseWindow;
+cmixlev;
 Codec;Kodeku
 Codec_Description;Përshkrimi i kodekut
 Codec_Info;Detajet e kodekut
@@ -308,10 +323,16 @@ ColorTheme;
 ColorTheme_Dark;
 ColorTheme_Light;
 ColorTheme_System;
+colour_description_present;
+colour_description_present_Source;
 colour_primaries;Primarët e ngjyrës
+colour_primaries_Source;
 colour_range;
+colour_range_Source;
 Comment;Komenti
 CommissionedBy;Autorizuar nga
+Compare;
+CompareView;
 Compilation;
 ComplementaryObject;
 CompleteName;Emri i plotë
@@ -322,6 +343,7 @@ Compression_Mode;
 Compression_Mode_Lossless;
 Compression_Mode_Lossy;
 Compression_Ratio;Raporti i kompresimit
+comprprof;
 Conductor;Dirigjenti
 ConformanceCheck;
 ConformanceErrors;
@@ -333,6 +355,7 @@ Container and general information;Mbajtësi dhe info në përgjithësi
 Content;
 ContentType;Lloji i përmbajtjes
 CoProducer;Koproducent
+Copy;
 Copyright;Të drejtat e autorit
 CopyrightYear;
 CostumeDesigner;Modeluesi i kostumit
@@ -344,6 +367,7 @@ Cover_Description;Përshkrimi i cover-it
 Cover_Mime;MIME i cover-it
 Cover_Type;Lloji i cover-it
 CoverData;
+CreatedOn;
 Cropped;Dimensionet e prerjes
 Custom;Me porosi
 CustomDownmixTargets;
@@ -352,10 +376,11 @@ DarkMode;
 Date;Data
 Debug;Debug
 Decimal point;Pika dhjetore
-Default;
 Default translation;
+Default;
 Default_Setting;
 DefaultTargetDeviceConfig;
+DefaultView;
 Delay;Vonesa
 Delay_Source;
 Delay_Source_Container;
@@ -364,6 +389,10 @@ Delete;Fshij
 Description;Përshkrimi
 Details;
 dialnorm;
+dialnorm_Average;
+dialnorm_Count;
+dialnorm_Maximum;
+dialnorm_Minimum;
 DialogueCorrected;
 DialogueEnhancement;
 DialogueNormalization;
@@ -386,6 +415,8 @@ Dolby_Atmos_Metadata;
 DolbyAtmos;
 Donate;Jep kontribut
 DotsPerInch;Pika për inç
+DownloadFile;
+DownloadFileError;
 Downmix;
 Downmix_5.1.x;
 Downmix_5to2;
@@ -400,6 +431,7 @@ Duration_Start_Command;
 Duration_Start2End;
 DynamicObject;
 DynamicRangeControl;
+dynrngprof;
 Eac3DrcProfile;
 Edit;Edito
 EditedBy;Edituar nga
@@ -409,7 +441,10 @@ ElementCount;
 EMail;Posta-e
 Enable FFmpeg plugin;
 Encoded_Application;Aplikimi i shkrimit
+Encoded_Application_Name;
+Encoded_Application_Version;
 Encoded_Date;Data e kodimit
+Encoded_Hardware;
 Encoded_Library;Libraria e shkrimit
 Encoded_Library_Name;
 Encoded_Library_Settings;Vendosjet e kodimit
@@ -418,8 +453,11 @@ Encoded_Original;Origjinal
 EncodedBy;Koduar nga
 EPG_Positions;Pozicionet EPG (të brendshme)
 EpisodeTitleNumber;
+Error;
 Error_File;Gabim gjatë leximit të skedës
 Error_File_Write;
+Error_Open;
+Error_Save;
 Events_MinDuration;
 Events_PaintOn;
 Events_PopOn;
@@ -434,8 +472,13 @@ Extensions;Siglat e zakonshme
 External_Media_NotMounted;
 Family;Familja
 Fax;Faks
-File;Skedë
+Feature_AdvancedMode;
+Feature_FilesCompare;
+Feature_More;
+Feature_SelectView;
+Field;
 File size;Masa e skedës
+File;Skedë
 File_Append;Bashkangjit te skeda ekzistuese (Kujdes : duhen pasur të njëjtët parametra)
 File_Created_Date;Data e krijimit të skedës
 File_Created_Date_Local;Data e krijimit të skedës (lokale)
@@ -453,10 +496,10 @@ FirstDisplay_Type;
 FirstFrameOfAction;
 FlatPanelTv;
 FlowID;
-Folder;Dosje
 Folder (R);Dosje (R)
 Folder (R)_Hint;Studio një dosje (me gjithë dosjet si rekursive)
 Folder (Recursively);Dosje (Rekursive)
+Folder;Dosje
 Folder_Hint;Studio një dosje
 FolderName;Emri i dosjes
 Forced;
@@ -517,6 +560,7 @@ FrameRate_Num;
 FrameRate_Original;Raporti origjinal i kuadrit
 FrameRate_Real;
 FullParsing;
+FullParsingTips;
 Gallery;
 General;Përgjithësi
 GeneralCompliance;
@@ -729,6 +773,7 @@ Height;Lartësia
 Height_CleanAperture;
 Height_Original;
 Help;Ndihmë
+HideOthers;
 Hint;Këshillë
 HomeTheaterAvr;
 How many audio streams?;Sa rryma të audios?
@@ -739,8 +784,8 @@ HTML;HTML
 ID;ID
 IdentClockStart;
 IFrameInterval;
-Image;Imazh
 Image stream(s);Rrymat e imazhit
+Image;Imazh
 Image_Codec_List;Kodekët e imazhit
 ImageCount;Numri i rrymave të imazhit
 ImmersiveStereo;
@@ -881,6 +926,7 @@ Language_lv;Letonisht
 Language_mg;Malagasy
 Language_mh;Marshallese
 Language_mi;Maori
+Language_mis;
 Language_mk;Maqedonisht
 Language_ml;Malayalam
 Language_mn;Mongolian
@@ -957,6 +1003,7 @@ Language_tw;Twi
 Language_ty;Tahitian
 Language_ug;Uighur
 Language_uk;Ukrainian
+Language_und;
 Language_ur;Urdu
 Language_uz;Uzbek
 Language_ve;Venda
@@ -971,20 +1018,23 @@ Language_yue;
 Language_za;Zhuang
 Language_zh;Kinezisht
 Language_zh-cmn;
-Language_zh-cn;Kinezisht (Kinë)
 Language_zh-CN;
+Language_zh-cn;Kinezisht (Kinë)
 Language_zh-Hans;
 Language_zh-Hant;
-Language_zh-tw;Kinezisht (Tajvan)
 Language_zh-TW;
+Language_zh-tw;Kinezisht (Tajvan)
 Language_zh-yue;
 Language_zu;Zulu
+Language_zxx;
+LanguageChanges;
 Languages;
 LawRating;Vlerësimi ligjor
-LegacyStreamDisplay;
 LCCN;LCCN
+LegacyStreamDisplay;
 LfeAttenuationKnown;
 LfeMixGain;
+lfeon;
 Library;Libraria e muksimit
 Lifetime_Subscribe_Button;
 Lightness;Dritësia
@@ -1029,6 +1079,7 @@ LtRtCenterMixGain;
 LtRtSurroundMixGain;
 Lyricist;Shkrimtari
 Lyrics;Fjalët
+MacCreatedBy;
 Mastered_Date;Data e masterizimit
 MasteredBy;Masterizuar nga
 MasteringDisplay_ColorPrimaries;
@@ -1036,6 +1087,7 @@ MasteringDisplay_Luminance;
 Matrix_Channel(s);
 Matrix_ChannelPositions;
 matrix_coefficients;Koeficientët e matricës
+matrix_coefficients_Source;
 Matrix_Format;
 MaxCLL;
 MaxFALL;
@@ -1046,8 +1098,9 @@ MD5;
 MD5_Unencoded;
 MediaInfo_About;Jep informacione shumë të detajuara për\r\nskedat multimediatike:\r\nMatroska, OGG (përfshirë OGM)\r\nMPEG1 (përfshirë VCD)\r\nMPEG2 (përfshirë DVD dhe SVCD)\r\nMPEG4 (përfshirë Itunes M4A)\r\nQuicktime\r\nRealMedia\r\nWindowsMedia (përfshirë WMV, WMA)\r\nMicrosoft RIFF (përfshirë AVI, WAV)\r\nFormate zanore (AC3, DTS, AAC, AU, AIFF...)
 MediaInfo_About_About;
-Menu;Meny
+MediaInfo_WebSite;
 Menu stream(s);Rrymat e menysë
+Menu;Meny
 Menu_Codec_List;Kodekët e menysë
 Menu_Hint;Mundësi të tjera
 Menu_No;Pa meny
@@ -1056,6 +1109,7 @@ MenuID;ID i menysë
 Metadata_Format;
 Metadata_Format_Type;
 Metadata_MuxingMode;
+Minimize;
 MixType;
 mn; min
 Mood;Gjendja shpirtërore
@@ -1096,10 +1150,15 @@ Object;
 ObjectCount;
 OK;OK
 One output file per input file;Një skedë output për skedë input
+OnlyDiffer;
+OnlyIdentical;
 Open;Hap
 OpenCaptionsLanguage;
 OpenCaptionsPresent;
 OpenCaptionsType;
+OpenFile;
+OpenFileError;
+OpenRecent;
 Options;Mundësi
 Options_Hint;Pëlqime
 Original;Origjinal
@@ -1111,17 +1170,21 @@ Originator;
 Other;Tjetër
 OtherIdentifier;
 OtherIdentifierType;
-Output;Outputi
+OtherViews;
 Output format;Formati i outputit
+Output;Outputi
 OverallBitRate;Raporti i plotë i bitit
 OverallBitRate_Maximum;Raporti maksimal i plotë i bitit
 OverallBitRate_Minimum;Raporti minimal i plotë i bitit
 OverallBitRate_Mode;Mënyra e raportit të plotë të bitit
 OverallBitRate_Nominal;Raporti nominal i plotë i bitit
+OverallBitRate_Precision_Max;
+OverallBitRate_Precision_Min;
 PackageName;
 PackFormat;
 Part;Pjesa
 Part_Count;Numri total
+PartialParsing;
 PartNumber;
 PartTotal;
 Performer;Interpretuesi
@@ -1148,12 +1211,14 @@ Position_Total;Totali
 Preferences;Pëlqime
 PreferredDownmix;
 Premium;
+Premium_Feature;
 Premium_Summary;
 PreselectionLabel;
 Presentation;
 PresentationConfig;
 PresentationConfig_ContentClassifier;
 PresentationID;
+PresentationLevel;
 PreviousDownmixType5ch;
 PreviousMixType2ch;
 PrimaryAudioLanguage;
@@ -1169,6 +1234,7 @@ ProgrammeTextLanguage;
 ProgrammeTitle;
 Publisher;Publikuesi
 Purchased_Date;Data e blerjes
+PurchaseInformation;
 Quote character;Citimi i personazhit
 RadioStation;Stacioni i radios
 Rating;Vlerësimi
@@ -1183,8 +1249,10 @@ Renew;
 ReplayGain_Gain;Replay gain
 ReplayGain_Peak;Piku i replay gain
 Report;
+ReportBy;
 Resolution;Rezolucioni
 RestoreLifetimeSubscription;
+Retry;
 s;s
 Sampled_Height;
 Sampled_Width;
@@ -1210,6 +1278,7 @@ Season;Sezoni
 SecondaryAudioLanguage;
 see below;shih poshtë
 Select your directory;
+SelectAll;
 Send HeaderFile;Ju lutem dërgojeni këtu Kokën e skedës : http://sourceforge.net/projects/mediainfo/ (Seksioni i problemeve)
 Separator_Columns;ndarësi i kolonave
 Separator_Lines;ndarësi i rreshtave
@@ -1218,21 +1287,25 @@ ServiceChannel;Numri i kanalit të shërbimit
 ServiceKind;
 ServiceName;Emri i shërbimit
 ServiceProvider;Siguruesi i shërbimit
+Services;
 ServiceType;Lloji i shërbimit
 Set;Vendos
 Set_Count;Vendos numërimin
 Setup;Sistemimi
 Sharpness;Mprehtësia
-Sheet;Fletë
 Sheet (Complete);Fletë (Plot)
-Shell extension;Shto në bazë (kur klikon në Explorer me të djathtën do jepet mundësia Media Info)
+Sheet;Fletë
 Shell extension, folder;Edhe për dosjet
 Shell extension, separate instance;
+Shell extension;Shto në bazë (kur klikon në Explorer me të djathtën do jepet mundësia Media Info)
 Shell InfoTip;Këshilla Informuese në bazë (në Explorer, kur çon mausin mbi skedë do shfaqen info)
 ShimName;
 ShimVersion;
 Show menu;Trego menynë
 Show toolbar;Trego brezin e mjeteve
+Show;
+ShowAll;
+ShowMore;
 SignalGroup;
 SigningPresent;
 SignLanguage;
@@ -1247,6 +1320,7 @@ Source_StreamSize;
 Source_StreamSize_Encoded;
 SpokenSubtitles;
 Standard;Standardi
+Stored_Height;
 StoreMethod_InterleavedFields;
 StoreMethod_SeparatedFields;
 StoreMethod_SeparatedFields_1;
@@ -1261,6 +1335,7 @@ StreamKind;Lloji i rrymës
 StreamKindID;Identifikuesi i rrymës
 StreamKindPos;Identifikuesi i rrymës
 StreamOrder;
+Streams;
 StreamSize;Masa e rrymës
 StreamSize_Demuxed;
 StreamSize_Encoded;
@@ -1270,6 +1345,7 @@ Subscribe;
 Subscribe_Button;
 Subscribe_Failed;
 Subscribe_Manage;
+Subscribe_Premium;
 Subscribe_Renew;
 Subscribe_Renew_Price;
 Subscribe_Unaviable;
@@ -1287,6 +1363,8 @@ Summary;Përmbledhja
 Supported formats;Format e përkrahura
 Supported?;Përkrahet?
 SupportUs;
+SupportUs2;
+surmixlev;
 SurroundAttenuationKnown;
 SwitchGroup;
 Synopsis;Konspekti
@@ -1297,11 +1375,12 @@ TargetDeviceConfig;
 Technician;Tekniku
 TermsOfUse;Detyrimet e përdorimit
 TertiaryAudioLanguage;
-Text;Tekst
+TestContinuousFileNames;
 Text - Custom;Tekst - Me porosi
 Text (HTML);Tekst (HTML)
 Text stream(s);Rrymat e tekstit
 Text streams;Rrymat e tekstit
+Text;Tekst
 Text_Codec_List;Kodekët e tekstit
 Text_Format_List;
 Text_Format_WithHint_List;
@@ -1341,11 +1420,12 @@ TrackFormat;
 TrackIndex;
 TrackUID;
 transfer_characteristics;Karakteristikat e transferimit
+transfer_characteristics_Source;
 Translate_Reports;
 Translator;Përktheu
 Transport;
-Tree;Pemë
 Tree & Text;Pemë & Tekst
+Tree;Pemë
 Trim_Center;
 Trim_Height;
 Trim_Surround;
@@ -1362,6 +1442,26 @@ TrimMode8i;
 TruePeakLevel;
 TruePeakLevel_Album;
 Type;
+Type_Composer;
+Type_Conductor;
+Type_Cover;
+Type_Cover_Back;
+Type_Cover_Media;
+Type_DuringPerformance;
+Type_DuringRecording;
+Type_FileIcon;
+Type_FileIcon_32x32;
+Type_Illustration;
+Type_LeafletPage;
+Type_Lyricist;
+Type_Performer;
+Type_Performer_Lead;
+Type_PerformerLogo;
+Type_Picture;
+Type_PublisherLogo;
+Type_RecordingLocation;
+Type_ScreenCapture;
+Type_Thumbnail;
 TypeDefinition;
 UniqueID;
 UniversalAdID;
@@ -1369,8 +1469,9 @@ UniversalAdID_Registry;
 UniversalAdID_Value;
 Unknown;Nuk e di
 Url;URL
-Video;Video
+Value;
 Video stream(s);Rryma(t) e videos
+Video;Video
 Video_Codec_List;Kodekët e videos
 Video_Delay;Vonesa e videos
 Video_Format_List;
@@ -1401,6 +1502,7 @@ WebSite_Video_More;Shko te trualli në rrjetë (%Url%) për të gjetur kodekun p
 Width;Gjerësia
 Width_CleanAperture;
 Width_Original;
+Window;
 WriteMe;Shkruaji autorit
 WriteToTranslator;Shkruaji përkthyesit
 Written_Date;Data e shkrimit
@@ -1409,5 +1511,6 @@ WrittenBy;Shkruar nga
 Yes;Po
 Your system;Sistemi yt
 Your translation;
-ZZ_Automatic_Percent;64
-ZZ_AutomaticLanguage_Percent;68
+Zoom;
+ZZ_Automatic_Percent;60
+ZZ_AutomaticLanguage_Percent;64

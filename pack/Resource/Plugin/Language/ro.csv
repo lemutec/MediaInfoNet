@@ -14,8 +14,8 @@
  bit1;bit
  bit2;biti
  bit3;biti
- bps;b/s
  Bps;B/s
+ bps;b/s
  Byte1;Bite
  Byte2;Biti
  Byte3;Biti
@@ -49,8 +49,8 @@
  frame3;
  GB;GB
  Gb;Gb
- Gbps;
  GBps;
+ Gbps;
  GHz;
  GiB;
  GibiByte1;
@@ -91,8 +91,8 @@
  KiloByte3;
  MB;
  Mb;
- Mbps;
  MBps;
+ Mbps;
  MebiBit1;
  MebiBit2;
  MebiBit3;
@@ -161,7 +161,9 @@
 7.1ch;
 About;Despre
 About_Hint;Sfaturi
+AC3_Metadata;
 Accompaniment;Acompaniament
+acmod;
 Active_DisplayAspectRatio;
 Active_Height;
 Active_Width;
@@ -177,9 +179,9 @@ AdID;
 ADM: Show ChannelFormats;
 ADM: Show TrackUIDs;
 AdmProfile;
-Advanced;Avansat
-Advanced mode;Mod avansat
 Advanced mode -->;
+Advanced mode;Mod avansat
+Advanced;Avansat
 Album;Album
 Album_ReplayGain_Gain;
 Album_ReplayGain_Peak;
@@ -187,18 +189,24 @@ Alignment;
 Alignment_Aligned;
 Alignment_Split;
 All;Toate
+AllFields;
 AlternateGroup;
+AnalyzeServicesMenu;
+App_About;Despre MediaInfo
+App_Hide;Ascunde MediaInfo
+App_Quit;Termină MediaInfo
 Archival_Location;Locul arhivei
 Arranger;Regizor
 ArtDirector;Director artistic
 AspectRatio;Raport imagine
 AssistantDirector;Director asistent
 AssociatedVideo_FrameRate;
-at;la
 At least one file;(Trebuie sa fie deschis cel putin un fisier)
+at;la
 Attachments;
-Audio;Audio
 Audio stream(s);Fluxuri audio
+Audio;Audio
+Audio_Channels_Total;
 Audio_Codec_List;Codecuri audio
 Audio_Format_List;
 Audio_Format_WithHint_List;
@@ -238,6 +246,9 @@ BitRate_Mode_CBR;
 BitRate_Mode_VBR;
 BitRate_Nominal;
 Bits-(Pixel*Frame);
+BitstreamLevel;
+Bring All to Front;Adu tot în față
+bsid;
 BufferSize;
 Cancel;Anulare
 CaptionServiceName;
@@ -253,8 +264,8 @@ ChannelMode;
 ChannelPositions;Pozitia canalelor
 ChannelPositions_Original;
 Chapter(s);Capitol(e)
-Chapters;Capitole
 Chapters stream(s);Flux(uri) capitole
+Chapters;Capitole
 Chapters_Codec_List;Codecuri capitole
 Chapters_No;Fara capitole
 Chapters_Pos_Begin;
@@ -262,9 +273,9 @@ Chapters_Pos_End;
 ChaptersCount;Numarul de fluxuri al capitolului
 CharacterSet;
 CheckNewVersion;Verificati existenta unei vesiuni noi
-Choose custom;Particularizare
 Choose custom sheet;Selectati raporul particularizat
 Choose custom text;Selectati textul particularizat
+Choose custom;Particularizare
 Choose export format;Selectati formatul de export particularizat
 Choose file(s);Deschideti fisierul
 Choose filename;Alegeti numele fisierului
@@ -274,11 +285,15 @@ Chroma;
 ChromaSubsampling;
 Classifier;
 ClearList;
-Close;Inchideti
 Close all before open;Inchideti tot inainte de a deschide
+Close;Inchideti
+CloseAll;
 ClosedCaptionsLanguage;
 ClosedCaptionsPresent;
 ClosedCaptionsType;
+CloseFile;
+CloseWindow;Închide fereastra
+cmixlev;
 Codec;Codec
 Codec_Description;
 Codec_Info;Detalii despre codec
@@ -308,10 +323,16 @@ ColorTheme;
 ColorTheme_Dark;
 ColorTheme_Light;
 ColorTheme_System;
+colour_description_present;
+colour_description_present_Source;
 colour_primaries;
+colour_primaries_Source;
 colour_range;
+colour_range_Source;
 Comment;Comentariu
 CommissionedBy;
+Compare;
+CompareView;
 Compilation;
 ComplementaryObject;
 CompleteName;Nume complet
@@ -322,6 +343,7 @@ Compression_Mode;
 Compression_Mode_Lossless;
 Compression_Mode_Lossy;
 Compression_Ratio;
+comprprof;
 Conductor;
 ConformanceCheck;
 ConformanceErrors;
@@ -333,6 +355,7 @@ Container and general information;Container si informatii generale
 Content;
 ContentType;Tip continut
 CoProducer;Coproducator
+Copy;Copiază
 Copyright;Drept autor
 CopyrightYear;
 CostumeDesigner;Costume
@@ -344,6 +367,7 @@ Cover_Description;
 Cover_Mime;
 Cover_Type;
 CoverData;
+CreatedOn;
 Cropped;
 Custom;Particularizat
 CustomDownmixTargets;
@@ -352,10 +376,11 @@ DarkMode;
 Date;Data
 Debug;Depanare
 Decimal point;Punct zecimal
-Default;
 Default translation;
+Default;
 Default_Setting;
 DefaultTargetDeviceConfig;
+DefaultView;
 Delay;Intarziere
 Delay_Source;
 Delay_Source_Container;
@@ -364,6 +389,10 @@ Delete;Sterge
 Description;Descriere
 Details;
 dialnorm;
+dialnorm_Average;
+dialnorm_Count;
+dialnorm_Maximum;
+dialnorm_Minimum;
 DialogueCorrected;
 DialogueEnhancement;
 DialogueNormalization;
@@ -386,6 +415,8 @@ Dolby_Atmos_Metadata;
 DolbyAtmos;
 Donate;Donatii
 DotsPerInch;
+DownloadFile;
+DownloadFileError;
 Downmix;
 Downmix_5.1.x;
 Downmix_5to2;
@@ -400,6 +431,7 @@ Duration_Start_Command;
 Duration_Start2End;
 DynamicObject;
 DynamicRangeControl;
+dynrngprof;
 Eac3DrcProfile;
 Edit;Editare
 EditedBy;Editat de
@@ -409,7 +441,10 @@ ElementCount;
 EMail;E-mail
 Enable FFmpeg plugin;
 Encoded_Application;Dezvoltator aplicatie
+Encoded_Application_Name;
+Encoded_Application_Version;
 Encoded_Date;Data codarii
+Encoded_Hardware;
 Encoded_Library;Dezvoltator biblioteci
 Encoded_Library_Name;
 Encoded_Library_Settings;Setari codare
@@ -418,8 +453,11 @@ Encoded_Original;Original
 EncodedBy;Codificat de
 EPG_Positions;
 EpisodeTitleNumber;
+Error;
 Error_File;Eroare la citirea fisierului
 Error_File_Write;
+Error_Open;
+Error_Save;
 Events_MinDuration;
 Events_PaintOn;
 Events_PopOn;
@@ -434,8 +472,13 @@ Extensions;Extensia folosita in mod curent
 External_Media_NotMounted;
 Family;
 Fax;Fax
-File;Fisier
+Feature_AdvancedMode;
+Feature_FilesCompare;
+Feature_More;
+Feature_SelectView;
+Field;
 File size;Dimensiune fisier
+File;Fisier
 File_Append;Adaugare la fisierul existent
 File_Created_Date;
 File_Created_Date_Local;
@@ -453,10 +496,10 @@ FirstDisplay_Type;
 FirstFrameOfAction;
 FlatPanelTv;
 FlowID;
-Folder;Director
 Folder (R);Director (R)
 Folder (R)_Hint;Selectati un director pentru analiza (cu toate subdirecoarele incluse)
 Folder (Recursively);Director (recursiv)
+Folder;Director
 Folder_Hint;Selectati un director pentru analiza
 FolderName;Numele directorului
 Forced;
@@ -517,6 +560,7 @@ FrameRate_Num;
 FrameRate_Original;
 FrameRate_Real;
 FullParsing;
+FullParsingTips;
 Gallery;
 General;Generale
 GeneralCompliance;
@@ -729,6 +773,7 @@ Height;Inaltime
 Height_CleanAperture;
 Height_Original;
 Help;Ajutor
+HideOthers;Ascunde restul
 Hint;
 HomeTheaterAvr;
 How many audio streams?;Cate fluxuri audio?
@@ -739,8 +784,8 @@ HTML;HTML
 ID;ID
 IdentClockStart;
 IFrameInterval;
-Image;Imagine
 Image stream(s);Fluxuri imagine
+Image;Imagine
 Image_Codec_List;Codecuri imagine
 ImageCount;Numarul de fluxuri imagine
 ImmersiveStereo;
@@ -881,6 +926,7 @@ Language_lv;
 Language_mg;
 Language_mh;
 Language_mi;
+Language_mis;
 Language_mk;
 Language_ml;
 Language_mn;
@@ -957,6 +1003,7 @@ Language_tw;
 Language_ty;
 Language_ug;
 Language_uk;
+Language_und;
 Language_ur;
 Language_uz;
 Language_ve;
@@ -971,20 +1018,23 @@ Language_yue;
 Language_za;
 Language_zh;
 Language_zh-cmn;
-Language_zh-cn;
 Language_zh-CN;
+Language_zh-cn;
 Language_zh-Hans;
 Language_zh-Hant;
-Language_zh-tw;
 Language_zh-TW;
+Language_zh-tw;
 Language_zh-yue;
 Language_zu;
+Language_zxx;
+LanguageChanges;
 Languages;
 LawRating;
-LegacyStreamDisplay;
 LCCN;
+LegacyStreamDisplay;
 LfeAttenuationKnown;
 LfeMixGain;
+lfeon;
 Library;Biblioteca muxing
 Lifetime_Subscribe_Button;
 Lightness;
@@ -1029,6 +1079,7 @@ LtRtCenterMixGain;
 LtRtSurroundMixGain;
 Lyricist;Textier
 Lyrics;
+MacCreatedBy;
 Mastered_Date;Data realizarii
 MasteredBy;Realizat de
 MasteringDisplay_ColorPrimaries;
@@ -1036,6 +1087,7 @@ MasteringDisplay_Luminance;
 Matrix_Channel(s);
 Matrix_ChannelPositions;
 matrix_coefficients;
+matrix_coefficients_Source;
 Matrix_Format;
 MaxCLL;
 MaxFALL;
@@ -1046,8 +1098,9 @@ MD5;
 MD5_Unencoded;
 MediaInfo_About;Furnizeaza informatii foarte detaliate\r\n despre un fisier multimedia
 MediaInfo_About_About;
-Menu;Meniu
+MediaInfo_WebSite;
 Menu stream(s);
+Menu;Meniu
 Menu_Codec_List;
 Menu_Hint;Mai multe posibilitati
 Menu_No;
@@ -1056,6 +1109,7 @@ MenuID;
 Metadata_Format;
 Metadata_Format_Type;
 Metadata_MuxingMode;
+Minimize;Minimizează
 MixType;
 mn; min
 Mood;Mod
@@ -1096,10 +1150,15 @@ Object;
 ObjectCount;
 OK;OK
 One output file per input file;Un fisier destinatie pentru fiecare fisier sursa
+OnlyDiffer;
+OnlyIdentical;
 Open;Deschide
 OpenCaptionsLanguage;
 OpenCaptionsPresent;
 OpenCaptionsType;
+OpenFile;
+OpenFileError;
+OpenRecent;
 Options;Optiuni
 Options_Hint;Preferinte
 Original;Original
@@ -1111,17 +1170,21 @@ Originator;
 Other;Altele
 OtherIdentifier;
 OtherIdentifierType;
-Output;Iesire
+OtherViews;
 Output format;Format iesire
+Output;Iesire
 OverallBitRate;BitRate general
 OverallBitRate_Maximum;
 OverallBitRate_Minimum;
 OverallBitRate_Mode;
 OverallBitRate_Nominal;
+OverallBitRate_Precision_Max;
+OverallBitRate_Precision_Min;
 PackageName;
 PackFormat;
 Part;Parte
 Part_Count;
+PartialParsing;
 PartNumber;
 PartTotal;
 Performer;Cantaret
@@ -1148,12 +1211,14 @@ Position_Total;
 Preferences;Preferinte
 PreferredDownmix;
 Premium;
+Premium_Feature;
 Premium_Summary;
 PreselectionLabel;
 Presentation;
 PresentationConfig;
 PresentationConfig_ContentClassifier;
 PresentationID;
+PresentationLevel;
 PreviousDownmixType5ch;
 PreviousMixType2ch;
 PrimaryAudioLanguage;
@@ -1169,6 +1234,7 @@ ProgrammeTextLanguage;
 ProgrammeTitle;
 Publisher;
 Purchased_Date;Data achizitionarii
+PurchaseInformation;
 Quote character;Citate
 RadioStation;Statia radio
 Rating;Rating
@@ -1183,8 +1249,10 @@ Renew;
 ReplayGain_Gain;
 ReplayGain_Peak;
 Report;
+ReportBy;
 Resolution;Rezolutie
 RestoreLifetimeSubscription;
+Retry;
 s;s
 Sampled_Height;
 Sampled_Width;
@@ -1210,6 +1278,7 @@ Season;Sezon
 SecondaryAudioLanguage;
 see below;vezi mai jos
 Select your directory;
+SelectAll;Selectează tot
 Send HeaderFile;
 Separator_Columns;separator coloane
 Separator_Lines;separator linii
@@ -1218,21 +1287,25 @@ ServiceChannel;
 ServiceKind;
 ServiceName;
 ServiceProvider;
+Services;Servicii
 ServiceType;
 Set;Seteaza
 Set_Count;Seteaza numaratorul
 Setup;Setari
 Sharpness;
-Sheet;Afisare
 Sheet (Complete);Afisare (completa)
-Shell extension; Extenise (in explorer executati click dreapta)
+Sheet;Afisare
 Shell extension, folder;
 Shell extension, separate instance;
+Shell extension; Extenise (in explorer executati click dreapta)
 Shell InfoTip;
 ShimName;
 ShimVersion;
 Show menu;Afisare meniu
 Show toolbar;Afisare toolbar
+Show;
+ShowAll;Afișează tot
+ShowMore;
 SignalGroup;
 SigningPresent;
 SignLanguage;
@@ -1247,6 +1320,7 @@ Source_StreamSize;
 Source_StreamSize_Encoded;
 SpokenSubtitles;
 Standard;
+Stored_Height;
 StoreMethod_InterleavedFields;
 StoreMethod_SeparatedFields;
 StoreMethod_SeparatedFields_1;
@@ -1261,6 +1335,7 @@ StreamKind;Tipul fluxului
 StreamKindID;
 StreamKindPos;
 StreamOrder;
+Streams;
 StreamSize;
 StreamSize_Demuxed;
 StreamSize_Encoded;
@@ -1270,6 +1345,7 @@ Subscribe;
 Subscribe_Button;
 Subscribe_Failed;
 Subscribe_Manage;
+Subscribe_Premium;
 Subscribe_Renew;
 Subscribe_Renew_Price;
 Subscribe_Unaviable;
@@ -1287,6 +1363,8 @@ Summary;Sumar
 Supported formats;Formate acceptate
 Supported?;Acceptat?
 SupportUs;
+SupportUs2;
+surmixlev;
 SurroundAttenuationKnown;
 SwitchGroup;
 Synopsis;
@@ -1297,11 +1375,12 @@ TargetDeviceConfig;
 Technician;Tehnician
 TermsOfUse;Condifiile de utilizare
 TertiaryAudioLanguage;
-Text;Text
+TestContinuousFileNames;
 Text - Custom;Text - particularizat
 Text (HTML);Text (HTLM)
 Text stream(s);Fluxuri text
 Text streams;Fluxuri text
+Text;Text
 Text_Codec_List;Codec text
 Text_Format_List;
 Text_Format_WithHint_List;
@@ -1341,11 +1420,12 @@ TrackFormat;
 TrackIndex;
 TrackUID;
 transfer_characteristics;
+transfer_characteristics_Source;
 Translate_Reports;
 Translator;Traducator
 Transport;
-Tree;Arbore
 Tree & Text;Arbore si text
+Tree;Arbore
 Trim_Center;
 Trim_Height;
 Trim_Surround;
@@ -1362,6 +1442,26 @@ TrimMode8i;
 TruePeakLevel;
 TruePeakLevel_Album;
 Type;
+Type_Composer;
+Type_Conductor;
+Type_Cover;
+Type_Cover_Back;
+Type_Cover_Media;
+Type_DuringPerformance;
+Type_DuringRecording;
+Type_FileIcon;
+Type_FileIcon_32x32;
+Type_Illustration;
+Type_LeafletPage;
+Type_Lyricist;
+Type_Performer;
+Type_Performer_Lead;
+Type_PerformerLogo;
+Type_Picture;
+Type_PublisherLogo;
+Type_RecordingLocation;
+Type_ScreenCapture;
+Type_Thumbnail;
 TypeDefinition;
 UniqueID;
 UniversalAdID;
@@ -1369,8 +1469,9 @@ UniversalAdID_Registry;
 UniversalAdID_Value;
 Unknown;Necunoscut
 Url;
-Video;Video
+Value;
 Video stream(s);Flux(uri) video
+Video;Video
 Video_Codec_List;Codecuri video
 Video_Delay;Intrziere video
 Video_Format_List;
@@ -1401,6 +1502,7 @@ WebSite_Video_More;Accesati site-ul web (%Url%) pentru a gasii acest codec video
 Width;Latime
 Width_CleanAperture;
 Width_Original;
+Window;Fereastră
 WriteMe;Scrieti-mi
 WriteToTranslator;Scrieti-i traducatorului
 Written_Date;Data mesajului
@@ -1409,5 +1511,6 @@ WrittenBy;Scris de
 Yes;Da
 Your system;Sistemul dvs
 Your translation;
-ZZ_Automatic_Percent;24
-ZZ_AutomaticLanguage_Percent;52
+Zoom;Zoom
+ZZ_Automatic_Percent;23
+ZZ_AutomaticLanguage_Percent;49

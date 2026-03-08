@@ -23,7 +23,11 @@ using System.Runtime.InteropServices;
 using System.Text;
 using static MediaInfoLib.Options;
 
+#pragma warning disable IDE0130 // Namespace does not match folder structure
+
 namespace MediaInfoLib;
+
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 
 public enum StreamKind
 {
