@@ -4,10 +4,10 @@
         <targetframeworks>net462;net472;net48;netstandard2.0;netstandard2.1</targetframeworks>
         <LangVersion>latest</LangVersion>
         <AssemblyName>MediaInfoDLL</AssemblyName>
-        <PackageVersion>26.1.0</PackageVersion>
+        <PackageVersion>26.1.0-beta1</PackageVersion>
         <AssemblyVersion>26.1.0</AssemblyVersion>
         <FileVersion>26.1.0</FileVersion>
-        <Version>$(VersionPrefix)26.1.0-beta1</Version>
+        <Version>$(VersionPrefix)26.1.0</Version>
         <Authors>Lemutec</Authors>
         <Company>Lemutec</Company>
         <Nullable>enable</Nullable>
@@ -22,6 +22,11 @@
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageIcon>MediaInfo.png</PackageIcon>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IncludeSource>true</IncludeSource>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
     </PropertyGroup>
 
     <ItemGroup>
